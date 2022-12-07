@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="HistoryBoothApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HistoryBoothApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" MinWidth="800" MinHeight="500">
+
+
+
+    <RelativePanel>
+        <Image x:Name="image1" Source="/Assets/HUbackground2.jpg" RelativePanel.AlignLeftWithPanel="True"></Image>
+        <Image x:Name="image2" Source="/Assets/HUlogo.jpg" RelativePanel.RightOf="image1" Stretch="UniformToFill"></Image>
+        <StackPanel Margin="20,20,60,20" x:Name="mainStackPanel" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" Orientation="Horizontal">
+            <Button BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="startButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30" Click="startButton_Click">Start</Button>
+            <Button BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="adminButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30" Click="adminButton_Click">Admin</Button>
+            <Button BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="quitButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30" Click="quitButton_Click">Quit</Button>
+        </StackPanel>
+    </RelativePanel>
+    
+</Page>

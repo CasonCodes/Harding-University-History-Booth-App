@@ -4,22 +4,30 @@
 
 1. App Summary:
 
+
 2. Contributions:
+
           Noah Overton: 
           
           Cason Kirschner:
 
 3. Work Percentage:
+
           Noah Overton: 
           
           Cason Kirschner: 
+
+
 
 GUI Photobooth Project Implementation notes:
 
 1. Use MVVM architecture with data binding between the View and ViewModel
 
 2. Use a third-party library for reading and writing mp3 metadata
-
+          ONLY READ AND WRITE TO "ApplicationData.Current.LocalFolder.Path" (using Taglib?). I believe we used this same library in MyTunes.
+          
+          "I was helping a team today who was having permission troubles using Taglib to save metadata to an mp3 file.  An exception would be thrown when trying to save the file, complaining that the app didn't have permissions to write to the folder containing the mp3 file.  UWP apps have limited permissions to read and write files.  By default, they are only supposed to read and write to files in their ApplicationData.Current.LocalFolder directory.  To figure out what your app's LocalFolder directory is, you can output to the debug console the ApplicationData.Current.LocalFolder.Path.  Your app should be setup to read and write mp3 files to this directory only." - Dr. McCown
+          
 3. Store all mp3 files in ApplicationData.LocalFolder
 
 4. All outstanding bugs should be included in your repo as an Issue.

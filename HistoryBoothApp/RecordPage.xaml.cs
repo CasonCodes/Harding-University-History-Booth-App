@@ -28,6 +28,8 @@ namespace HistoryBoothApp
             this.InitializeComponent();
             ApplicationView.PreferredLaunchViewSize = new Size(800, 500);
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
+
+            
         }
 
         private void doneButton_Click(object sender, RoutedEventArgs e)

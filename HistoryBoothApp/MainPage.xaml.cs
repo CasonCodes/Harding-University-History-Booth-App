@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Windows.Input;
 using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -32,10 +33,41 @@ namespace HistoryBoothApp
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
         }
 
-        private void startButton_Click(object sender, RoutedEventArgs e)
+        private async void displayAcknowledgement()
+        {            
+
+            ContentDialog acknowledgement = new ContentDialog();
+            acknowledgement.Title = "Recording Acknowledgement";
+            acknowledgement.Content =
+                "This program uses the microphone to record your voice.\n" +
+                "Any voice recording submitted is for the use of Harding University only.\n\n" +
+                "Do you agree to these terms?";
+
+            acknowledgement.IsPrimaryButtonEnabled = true;
+            acknowledgement.PrimaryButtonText = "Agree";
+
+            // if user presses agree, display next page
+            acknowledgement.PrimaryButtonClick += OnPrimaryButtonClick;
+
+            acknowledgement.IsSecondaryButtonEnabled = true;
+            acknowledgement.SecondaryButtonText = "Disagree";
+
+
+            // if user presses disagree, remain on main page
+
+            await acknowledgement.ShowAsync();
+        }
+
+        private void OnPrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
         {
+            // Navigate to the next page if the user clicks the primary button
             InfoPage infoPage = new InfoPage();
             Frame.Navigate(typeof(InfoPage), infoPage);
+        }
+
+        private void startButton_Click(object sender, RoutedEventArgs e)
+        {
+            displayAcknowledgement();
         }
 
         private void adminButton_Click(object sender, RoutedEventArgs e)

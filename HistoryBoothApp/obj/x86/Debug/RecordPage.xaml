@@ -18,11 +18,16 @@
             <StackPanel Background="DimGray" CornerRadius="9" Padding="20,20,20,20">
 
                 <TextBlock HorizontalAlignment="Left" Width="100" Text="Record"></TextBlock>
+               
             
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Background="Goldenrod"  CornerRadius="9" Padding="40,20,40,20" Margin="30">
-                    <TextBlock x:ConnectionId='11' x:Name="minuteTextBlock" FontSize="70">0</TextBlock>
+                    <TextBlock x:ConnectionId='11' x:Name="minuteTextBlock" FontSize="70">00</TextBlock>
                     <TextBlock FontSize="70">:</TextBlock>
                     <TextBlock x:ConnectionId='12' x:Name="secondTextBlock" FontSize="70">00</TextBlock>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBlock Width="150" Text="10:00 Minute Time Limit" HorizontalAlignment="Center"></TextBlock>
                 </StackPanel>
 
             

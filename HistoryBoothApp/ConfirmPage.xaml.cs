@@ -28,6 +28,17 @@ namespace HistoryBoothApp
             this.InitializeComponent();
             ApplicationView.PreferredLaunchViewSize = new Size(800, 500);
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
+
+            // fetches current year, adds combo box items for
+            // each decade from the 1920's to the current decade
+            int currentYear = Convert.ToInt32(DateTime.Now.Year.ToString());
+            for (int y = 1920; y < currentYear; y += 10)
+            {
+                decadeComboBox.Items.Add(y + "'s");
+            }
+
+            // TODO: load mp3 file meta data to show all user information together
+
         }
 
         private void finishButton_Click(object sender, RoutedEventArgs e)

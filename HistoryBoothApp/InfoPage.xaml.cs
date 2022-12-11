@@ -44,7 +44,7 @@ namespace HistoryBoothApp
             ContentDialog acknowledgement = new ContentDialog();
             acknowledgement.Title = "Missing Information";
             acknowledgement.Content = "Look's like we're missing some details.\n" + 
-                "Please make sure your all information has been entered.";
+                "Please make sure all information has been entered.";
 
             acknowledgement.IsPrimaryButtonEnabled = true;
             acknowledgement.PrimaryButtonText = "OK";
@@ -75,7 +75,7 @@ namespace HistoryBoothApp
                     decadeComboBox.BorderBrush = new SolidColorBrush(Windows.UI.Colors.Red);
                 }
                 if ((bool)yesRadioButton.IsChecked == false && (bool)noRadioButton.IsChecked == false) {
-                    // wanted to make something red, but color properties aren't working
+                    // wanted to make radio buttons red, but unsuccessful
                 }
                 displayMissingInfoDialog();
             }

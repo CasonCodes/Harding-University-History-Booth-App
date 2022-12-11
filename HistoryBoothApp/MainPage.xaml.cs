@@ -31,6 +31,12 @@ namespace HistoryBoothApp
             ApplicationView.PreferredLaunchViewSize = new Size(800, 500);
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
+
+            // load any/all mp3 recordings
+
+            // initialize mp3 object, pass to info page
+            
+
         }
 
         private async void displayAcknowledgement()

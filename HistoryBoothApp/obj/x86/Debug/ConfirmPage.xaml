@@ -9,10 +9,53 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" MinWidth="800" MinHeight="500">
 
     <RelativePanel>
-        <Image x:ConnectionId='2' x:Name="image1" Source="/Assets/HUbackground3.jpg" Stretch="UniformToFill"></Image>
+        <Image x:ConnectionId='2' x:Name="image1" Source="/Assets/HUbackground3.jpg" Stretch="UniformToFill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:ConnectionId='3' x:Name="image2" Source="/Assets/blackBackground.jpg" Width="800" Stretch="Fill" RelativePanel.AlignRightWithPanel="True"/>
+
+        <StackPanel RelativePanel.AlignHorizontalCenterWith="image2" RelativePanel.AlignVerticalCenterWith="image2">
+            
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Full Name:" Margin="0,0,20,0" VerticalAlignment="Center"></TextBlock>
+                <TextBox Width="350"></TextBox>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Decade of Story:" Margin="0,0,20,0" VerticalAlignment="Center"></TextBlock>
+                <ComboBox x:ConnectionId='8' x:Name="decadeComboBox"  Width="201" Margin="20,20,20,20"/>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Student Status:" Margin="0,0,20,0" VerticalAlignment="Center"></TextBlock>
+                <StackPanel Orientation="Horizontal" Width="280" Height="auto" Margin="40,20,0,20">
+                    <RadioButton x:ConnectionId='6' x:Name="yesRadioButton" IsTabStop="False" HorizontalAlignment="Center">Yes</RadioButton>
+                    <RadioButton x:ConnectionId='7' x:Name="noRadioButton" IsTabStop="False">No</RadioButton>
+                </StackPanel>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                <TextBlock Text="Custom Tags:" Margin="0,0,20,0" VerticalAlignment="Center"></TextBlock>
+                <AutoSuggestBox Width="325"></AutoSuggestBox>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Other Notes:" Margin="0,0,20,0" VerticalAlignment="Center"></TextBlock>
+                <TextBox Width="330" PlaceholderText="optional..."></TextBox>
+            </StackPanel>
+            
+        </StackPanel>
+
         <StackPanel Margin="20,20,60,20" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" Orientation="Horizontal">
-            <Button x:ConnectionId='3' BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="backButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30"                         >Back</Button>
-            <Button x:ConnectionId='4' BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="finishButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30"                           >Finish</Button>
+            <Button x:ConnectionId='4' BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="backButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30"                         >Back</Button>
+            <Button x:ConnectionId='5' BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="finishButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30"                           >Finish</Button>
         </StackPanel>
     </RelativePanel>
 </Page>

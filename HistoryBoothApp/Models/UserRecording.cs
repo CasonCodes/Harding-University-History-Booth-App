@@ -9,14 +9,14 @@
         public bool wasStudent { get; set; }
 
         //property for the recording mp3 itself
-        public Taglib.File recording { get; set; }
+        public TagLib.File recording { get; set; }
 
-        public Taglib.File ReadRecording()
+        public TagLib.File ReadRecording()
         {
             return recording;
         }
 
-        public bool WriteRecording(Taglib.File value)
+        public bool WriteRecording(TagLib.File value)
         {
             return true;
         }

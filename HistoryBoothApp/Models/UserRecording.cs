@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HistoryBoothApp.Models
+﻿namespace HistoryBoothApp.Models
 {
     public class UserRecording
     {
@@ -15,16 +9,16 @@ namespace HistoryBoothApp.Models
         public bool wasStudent { get; set; }
 
         //property for the recording mp3 itself
-        //public Taglib.File recording { get; set; }
+        public Taglib.File recording { get; set; }
 
-        //public Taglib.File ReadRecording()
-        //{
-        //    return recording;
-        //}
+        public Taglib.File ReadRecording()
+        {
+            return recording;
+        }
 
-        //public bool WriteRecording(Taglib.File value)
-        //{
-        //    return true;
-        //}
+        public bool WriteRecording(Taglib.File value)
+        {
+            return true;
+        }
     }
 }

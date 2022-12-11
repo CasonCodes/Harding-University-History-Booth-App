@@ -17,5 +17,13 @@ namespace HistoryBoothApp.Models
             password = "password";
             userRecordings = new List<UserRecording>();
         }
+
+        //Method to retrieve list of available user recordings and return
+        public List<UserRecording> FindUserRecordings()
+        {
+            List<UserRecording> availableRecordings = null;
+
+            return availableRecordings;
+        }
     }
 }

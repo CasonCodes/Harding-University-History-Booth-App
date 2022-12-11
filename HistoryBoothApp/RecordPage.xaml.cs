@@ -95,8 +95,6 @@ namespace HistoryBoothApp
         private void backButton_Click(object sender, RoutedEventArgs e)
         {
             Frame.GoBack();
-        }
-
-        
+        }                
     }
 }

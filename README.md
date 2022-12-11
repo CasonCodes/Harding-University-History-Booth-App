@@ -68,10 +68,16 @@ GUI Photobooth Project Implementation notes:
 
 MVVM NOTES (mostly from mvvm lecture):
 
-          Create Model for representing User/User Data and an associated ViewModel (probably with same properties) that exposes properties to the UI. Use Data binding.
+          Create Model for representing User/User Data and
+          an associated ViewModel (probably with same properties)
+          that exposes properties to the UI. Use Data binding.
           
-          Not using database, just holding mp3 with metadata in memory until recording is completed.
+          Not using database, just holding mp3 with metadata
+          in memory until recording is completed.
           
-          Logic for mp3 code is in the MODEL. ViewModel won't know how to write to mp3, only how to instantiate model and expose its data to the UI.
+          Logic for mp3 code is in the MODEL. ViewModel won't know
+          how to write to mp3, only how to instantiate model and expose
+          its data to the UI.
           
-          Admin model for holding info on admin with associated viewmodel. Observable collection or list for available recordings (expose to view).
+          Admin model for holding info on admin with associated viewmodel.
+          Observable collection or list for available recordings (expose to view).

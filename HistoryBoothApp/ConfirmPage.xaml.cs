@@ -78,7 +78,7 @@ namespace HistoryBoothApp
         {
             ContentDialog acknowledgement = new ContentDialog();
             acknowledgement.Title = "Missing Information";
-            acknowledgement.Content = "Look's like we're missing some details.\n" +
+            acknowledgement.Content = "Looks like we're missing some details.\n" +
                 "Please make sure all information has been entered.";
 
             acknowledgement.IsPrimaryButtonEnabled = true;

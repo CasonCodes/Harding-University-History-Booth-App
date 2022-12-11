@@ -21,18 +21,29 @@
         </Image>
         <Image x:Name="image2" Source="/Assets/blackBackground.jpg" Width="800" Stretch="Fill" RelativePanel.AlignRightWithPanel="True"/>
 
-        <StackPanel RelativePanel.AlignHorizontalCenterWith="image2" RelativePanel.AlignVerticalCenterWith="image2">
+        <StackPanel RelativePanel.AlignHorizontalCenterWith="image2" RelativePanel.AlignVerticalCenterWith="image2"
+                    BorderBrush="Black" Background="DarkGray" CornerRadius="9" Padding="20,20,20,20">
             
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Full Name:" Margin="0,0,20,0" VerticalAlignment="Center"></TextBlock>
-                <TextBox Width="350"></TextBox>
+                <TextBox x:Name="nameTextBox" Width="345"></TextBox>
             </StackPanel>
             
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Decade of Story:" Margin="0,0,20,0" VerticalAlignment="Center"></TextBlock>
-                <ComboBox x:Name="decadeComboBox"  Width="201" Margin="20,20,20,20"/>
+                <ComboBox x:Name="decadeComboBox"  Width="289" Margin="20,20,20,20"/>
+            </StackPanel>        
+            
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                <TextBlock Text="Custom Tags:" Margin="0,0,20,0" VerticalAlignment="Center"></TextBlock>
+                <TextBox Width="329" PlaceholderText="optional..."></TextBox>
             </StackPanel>
             
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Description:" Margin="0,0,20,0" VerticalAlignment="Center"></TextBlock>
+                <TextBox Width="337" PlaceholderText="optional..."></TextBox>
+            </StackPanel>
+
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Student Status:" Margin="0,0,20,0" VerticalAlignment="Center"></TextBlock>
                 <StackPanel Orientation="Horizontal" Width="280" Height="auto" Margin="40,20,0,20">
@@ -40,17 +51,7 @@
                     <RadioButton x:Name="noRadioButton" IsTabStop="False">No</RadioButton>
                 </StackPanel>
             </StackPanel>
-            
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
-                <TextBlock Text="Custom Tags:" Margin="0,0,20,0" VerticalAlignment="Center"></TextBlock>
-                <AutoSuggestBox Width="325"></AutoSuggestBox>
-            </StackPanel>
-            
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Other Notes:" Margin="0,0,20,0" VerticalAlignment="Center"></TextBlock>
-                <TextBox Width="330" PlaceholderText="optional..."></TextBox>
-            </StackPanel>
-            
+
         </StackPanel>
 
         <StackPanel Margin="20,20,60,20" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" Orientation="Horizontal">

@@ -54,7 +54,7 @@ namespace HistoryBoothApp
 
         private void continueButton_Click(object sender, RoutedEventArgs e)
         {
-            // TODO: make sure user enters all information before continuing
+            // make sure user enters all information before continuing
             if (nameTextBox.Text != "" 
                 && decadeComboBox.SelectedIndex != -1 
                 && ((bool)yesRadioButton.IsChecked || (bool)noRadioButton.IsChecked))

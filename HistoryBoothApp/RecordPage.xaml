@@ -9,17 +9,29 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" MinWidth="800" MinHeight="500">
 
     <RelativePanel>
-        <Image x:Name="image1" Source="/Assets/HUbackground2.jpg" RelativePanel.AlignLeftWithPanel="True"  Width="790"></Image>
+        <Image x:Name="image1" Source="/Assets/HUbackground2.jpg" RelativePanel.AlignLeftWithPanel="True"  ></Image>
         <Image x:Name="image2" Source="/Assets/blackBackground.jpg" RelativePanel.RightOf="image1" Stretch="UniformToFill"></Image>
-        
+
+        <StackPanel RelativePanel.AlignHorizontalCenterWith="image2" RelativePanel.AlignVerticalCenterWith="image2" 
+                    BorderBrush="Black" Background="DarkGray" CornerRadius="9" Padding="20,20,20,20" Width="850" Height="700">
+
+            
+
+            <StackPanel Orientation="Horizontal">
+                <MediaElement x:Name="mediaElement" Height="100" Width="800" AreTransportControlsEnabled="True"  AudioCategory="BackgroundCapableMedia" />
+            </StackPanel>
+            
+        </StackPanel>
+
         <StackPanel  Margin="20,20,60,20"  Orientation="Horizontal" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
             
             <Button BorderBrush="Black" Background="DarkGray" x:Name="recordButton" CornerRadius="9" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30" Click="recordButton_Click">&#11044; Record</Button>
             <Button BorderBrush="Black" Background="DarkGray" x:Name="pauseButton" CornerRadius="9" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30" Click="pauseButton_Click">&#10074;&#10074; Pause</Button>
-            <Button BorderBrush="Black" Background="DarkGray" x:Name="stopButton" CornerRadius="9" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30" Click="stopButton_Click">&#9724; Stop</Button>
+            <Button BorderBrush="Black" Background="DarkGray" x:Name="eraseButton" CornerRadius="9" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30" Click="eraseButton_Click">&#9724; Erase</Button>
             <Button BorderBrush="Black" Background="DarkGray" x:Name="playButton" CornerRadius="9" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30" Click="playButton_Click">&#9654; Play</Button>
             <Button BorderBrush="Black" Background="DarkGray" x:Name="backButton" CornerRadius="9" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30" Click="backButton_Click">Back</Button>
             <Button BorderBrush="Black" Background="DarkGray" x:Name="doneButton" CornerRadius="9" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30" Click="doneButton_Click">Done</Button>
         </StackPanel>
+        
     </RelativePanel>
 </Page>

@@ -29,7 +29,11 @@ namespace HistoryBoothApp
             ApplicationView.PreferredLaunchViewSize = new Size(800, 500);
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
 
-            
+            MediaTransportControls mtc = new MediaTransportControls();
+            mtc.IsFullWindowButtonVisible = false;
+            mtc.IsNextTrackButtonVisible = false;
+            mtc.IsPreviousTrackButtonVisible = false;
+            mediaElement.TransportControls = mtc;
         }
 
         private void doneButton_Click(object sender, RoutedEventArgs e)
@@ -48,7 +52,7 @@ namespace HistoryBoothApp
             // TODO:
         }
 
-        private void stopButton_Click(object sender, RoutedEventArgs e)
+        private void eraseButton_Click(object sender, RoutedEventArgs e)
         {
             // TODO:
         }
@@ -62,5 +66,7 @@ namespace HistoryBoothApp
         {
             Frame.GoBack();
         }
+
+        
     }
 }

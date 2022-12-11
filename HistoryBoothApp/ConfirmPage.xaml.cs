@@ -38,23 +38,68 @@ namespace HistoryBoothApp
             }
 
             // TODO: load mp3 file meta data to show all user information together
+            
 
         }
 
-        private void finishButton_Click(object sender, RoutedEventArgs e)
+        private async void displayConfirmDialog()
+        {
+            ContentDialog acknowledgement = new ContentDialog();
+            acknowledgement.Title = "Confirm Recording";
+            acknowledgement.Content =
+                "Are you sure you want to submit your recording?\n" +
+                "Once your press 'Complete and Submit', your story will be saved!";
+
+            acknowledgement.IsPrimaryButtonEnabled = true;
+            acknowledgement.PrimaryButtonText = "Complete and Submit";
+            acknowledgement.PrimaryButtonClick += OnPrimaryButtonClick;
+
+            acknowledgement.IsSecondaryButtonEnabled = true;
+            acknowledgement.SecondaryButtonText = "Cancel";
+            // if user presses cancel, remain on confirm page
+
+            await acknowledgement.ShowAsync();
+        }
+
+        private void OnPrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
         {
             // TODO: save mp3 file and metadata
 
-
             // TODO: initialize the mp3 object for next user
-
 
             // TODO: return to the main page (clear all the metadata)
             // maybe in onNavigatedTo() in MainPage, clear all data 
             Frame.GoBack();
             Frame.GoBack();
             Frame.GoBack();
+        }
 
+        private async void displayMissingInfoDialog()
+        {
+            ContentDialog acknowledgement = new ContentDialog();
+            acknowledgement.Title = "Missing Information";
+            acknowledgement.Content = "Look's like we're missing some details.\n" +
+                "Please make sure all information has been entered.";
+
+            acknowledgement.IsPrimaryButtonEnabled = true;
+            acknowledgement.PrimaryButtonText = "OK";
+
+            await acknowledgement.ShowAsync();
+        }
+
+        private void finishButton_Click(object sender, RoutedEventArgs e)
+        {
+            // make sure user didnt clear out the information           
+            if (nameTextBox.Text == "")
+            {
+                nameTextBox.BorderBrush = new SolidColorBrush(Windows.UI.Colors.Red);
+                displayMissingInfoDialog();
+            }
+            else
+            {
+                // show confirm dialog
+                displayConfirmDialog();                
+            }            
         }
 
         private void backButton_Click(object sender, RoutedEventArgs e)

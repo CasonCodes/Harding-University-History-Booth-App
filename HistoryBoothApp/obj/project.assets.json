@@ -10255,18 +10255,18 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Cason\\.nuget\\packages\\": {},
+    "C:\\Users\\noah_\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Cason\\Documents\\GitHub\\HistoryBoothApp\\HistoryBoothApp\\HistoryBoothApp.csproj",
+      "projectUniqueName": "C:\\Users\\noah_\\GitHub\\HistoryBoothApp\\HistoryBoothApp\\HistoryBoothApp.csproj",
       "projectName": "HistoryBoothApp",
-      "projectPath": "C:\\Users\\Cason\\Documents\\GitHub\\HistoryBoothApp\\HistoryBoothApp\\HistoryBoothApp.csproj",
-      "packagesPath": "C:\\Users\\Cason\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Cason\\Documents\\GitHub\\HistoryBoothApp\\HistoryBoothApp\\obj\\",
+      "projectPath": "C:\\Users\\noah_\\GitHub\\HistoryBoothApp\\HistoryBoothApp\\HistoryBoothApp.csproj",
+      "packagesPath": "C:\\Users\\noah_\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\noah_\\GitHub\\HistoryBoothApp\\HistoryBoothApp\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -10274,7 +10274,7 @@
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Cason\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\noah_\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

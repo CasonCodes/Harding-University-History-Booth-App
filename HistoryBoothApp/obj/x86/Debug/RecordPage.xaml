@@ -13,24 +13,40 @@
         <Image x:ConnectionId='3' x:Name="image2" Source="/Assets/blackBackground.jpg" RelativePanel.RightOf="image1" Stretch="UniformToFill"></Image>
 
         <StackPanel RelativePanel.AlignHorizontalCenterWith="image2" RelativePanel.AlignVerticalCenterWith="image2" 
-                    BorderBrush="Black" Background="DarkGray" CornerRadius="9" Padding="20,20,20,20" Width="850" Height="700">
+                    Background="DarkGray" CornerRadius="9" Padding="20,20,20,20" Width="850" Height="585">
+
+            <StackPanel Background="DimGray" CornerRadius="9" Padding="20,20,20,20">
+
+                <TextBlock HorizontalAlignment="Left" Width="100" Text="Record"></TextBlock>
+            
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Background="Goldenrod"  CornerRadius="9" Padding="40,20,40,20" Margin="30">
+                    <TextBlock x:ConnectionId='11' x:Name="minuteTextBlock" FontSize="70">0</TextBlock>
+                    <TextBlock FontSize="70">:</TextBlock>
+                    <TextBlock x:ConnectionId='12' x:Name="secondTextBlock" FontSize="70">00</TextBlock>
+                </StackPanel>
 
             
+                <Slider x:ConnectionId='7' x:Name="recorderSlider" Width="600"/>
 
-            <StackPanel Orientation="Horizontal">
-                <MediaElement x:ConnectionId='10' x:Name="mediaElement" Height="100" Width="800" AreTransportControlsEnabled="True"  AudioCategory="BackgroundCapableMedia" />
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button x:ConnectionId='8' BorderBrush="Black" Background="DarkGray" x:Name="recordButton" CornerRadius="9" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30"                            Content="&#11044; Record"></Button>
+                    <Button x:ConnectionId='9' BorderBrush="Black" Background="DarkGray" x:Name="eraseButton" CornerRadius="9" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30"                           Content="&#9724; Erase"></Button>
+                    <Button x:ConnectionId='10' BorderBrush="Black" Background="DarkGray" x:Name="playButton" CornerRadius="9" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30"                          Content="&#9654; Play"></Button>
+                </StackPanel>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Background="DimGray" CornerRadius="9" Padding="20,20,20,20" Margin="0,20,0,0">
+                <TextBlock HorizontalAlignment="Left" Width="100" Text="Listen"></TextBlock>
+                <MediaElement x:ConnectionId='6' x:Name="mediaElement" Height="100" Width="780" AreTransportControlsEnabled="True" AudioCategory="BackgroundCapableMedia"/>
             </StackPanel>
             
         </StackPanel>
 
         <StackPanel  Margin="20,20,60,20"  Orientation="Horizontal" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
-            
-            <Button x:ConnectionId='4' BorderBrush="Black" Background="DarkGray" x:Name="recordButton" CornerRadius="9" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30"                           >&#11044; Record</Button>
-            <Button x:ConnectionId='5' BorderBrush="Black" Background="DarkGray" x:Name="pauseButton" CornerRadius="9" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30"                          >&#10074;&#10074; Pause</Button>
-            <Button x:ConnectionId='6' BorderBrush="Black" Background="DarkGray" x:Name="eraseButton" CornerRadius="9" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30"                          >&#9724; Erase</Button>
-            <Button x:ConnectionId='7' BorderBrush="Black" Background="DarkGray" x:Name="playButton" CornerRadius="9" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30"                         >&#9654; Play</Button>
-            <Button x:ConnectionId='8' BorderBrush="Black" Background="DarkGray" x:Name="backButton" CornerRadius="9" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30"                         >Back</Button>
-            <Button x:ConnectionId='9' BorderBrush="Black" Background="DarkGray" x:Name="doneButton" CornerRadius="9" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30"                         >Done</Button>
+            <Button x:ConnectionId='4' BorderBrush="Black" Background="DarkGray" x:Name="backButton" CornerRadius="9" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30"                          Content="Back"></Button>
+            <Button x:ConnectionId='5' BorderBrush="Black" Background="DarkGray" x:Name="doneButton" CornerRadius="9" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30"                          Content="Done"></Button>
         </StackPanel>
         
     </RelativePanel>

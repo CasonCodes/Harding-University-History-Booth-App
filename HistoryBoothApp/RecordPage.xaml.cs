@@ -45,21 +45,51 @@ namespace HistoryBoothApp
         private void playButton_Click(object sender, RoutedEventArgs e)
         {
             // TODO:
-        }
-
-        private void pauseButton_Click(object sender, RoutedEventArgs e)
-        {
-            // TODO:
+            // start playing current mp3 file at slider value of media player
+            // may not need a dedicated button if a media player control is used
+            if (playButton.Content.ToString() == "▶ Play")
+            {
+                recordButton.Content = "⬤ Record";
+                playButton.Content = "❚❚ Pause";
+            }
+            else if (playButton.Content.ToString() == "❚❚ Pause")
+            {
+                playButton.Content = "▶ Play";
+            }
         }
 
         private void eraseButton_Click(object sender, RoutedEventArgs e)
         {
             // TODO:
+            // erase the current data for the mp3 file
+            if (playButton.Content.ToString() == "❚❚ Pause")
+            {
+                playButton.Content = "▶ Play";
+            }
+            if (recordButton.Content.ToString() == "❚❚ Pause")
+            {
+                recordButton.Content = "⬤ Record";
+            }
+            minuteTextBlock.Text = "0";
+            secondTextBlock.Text = "00";
         }
 
         private void recordButton_Click(object sender, RoutedEventArgs e)
         {
             // TODO:
+            // enable recording mode
+            // this button can flip back and forth between 'record' <--> 'pause'
+            if (recordButton.Content.ToString() == "⬤ Record")
+            {
+                recordButton.Content = "❚❚ Pause";
+                playButton.Content = "▶ Play";
+                // TODO: start recording and append to mp3 file
+            }
+            else if (recordButton.Content.ToString() == "❚❚ Pause")
+            {
+                recordButton.Content = "⬤ Record";
+                // TODO: pause the recording
+            }
         }
 
         private void backButton_Click(object sender, RoutedEventArgs e)

@@ -35,7 +35,6 @@ namespace HistoryBoothApp
 
         private async void displayAcknowledgement()
         {            
-
             ContentDialog acknowledgement = new ContentDialog();
             acknowledgement.Title = "Recording Acknowledgement";
             acknowledgement.Content =
@@ -45,14 +44,10 @@ namespace HistoryBoothApp
 
             acknowledgement.IsPrimaryButtonEnabled = true;
             acknowledgement.PrimaryButtonText = "Agree";
-
-            // if user presses agree, display next page
             acknowledgement.PrimaryButtonClick += OnPrimaryButtonClick;
 
             acknowledgement.IsSecondaryButtonEnabled = true;
             acknowledgement.SecondaryButtonText = "Disagree";
-
-
             // if user presses disagree, remain on main page
 
             await acknowledgement.ShowAsync();

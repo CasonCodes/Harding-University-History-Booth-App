@@ -39,6 +39,18 @@ namespace HistoryBoothApp
 
 
         }
+        private async void displayMissingInfoDialog()
+        {
+            ContentDialog acknowledgement = new ContentDialog();
+            acknowledgement.Title = "Missing Information";
+            acknowledgement.Content = "Look's like we're missing some details.\n" + 
+                "Please make sure your all information has been entered.";
+
+            acknowledgement.IsPrimaryButtonEnabled = true;
+            acknowledgement.PrimaryButtonText = "OK";
+
+            await acknowledgement.ShowAsync();
+        }
 
         private void continueButton_Click(object sender, RoutedEventArgs e)
         {
@@ -51,6 +63,21 @@ namespace HistoryBoothApp
                 // to mp3 file object and navigate to the record page
                 RecordPage recordPage = new RecordPage();
                 Frame.Navigate(typeof(RecordPage), recordPage);
+            }
+            else
+            {
+                if (nameTextBox.Text == "")
+                {
+                    nameTextBox.BorderBrush = new SolidColorBrush(Windows.UI.Colors.Red);
+                }
+                if (decadeComboBox.SelectedIndex == -1)
+                {
+                    decadeComboBox.BorderBrush = new SolidColorBrush(Windows.UI.Colors.Red);
+                }
+                if ((bool)yesRadioButton.IsChecked == false && (bool)noRadioButton.IsChecked == false) {
+                    // wanted to make something red, but color properties aren't working
+                }
+                displayMissingInfoDialog();
             }
            
         }

@@ -2,8 +2,7 @@
 # Noah Overton
 # Cason Kirschner
 
-1. App Summary:
-
+1. App Summary: Prototype UWP application that allows the user to record a story about Harding University and administrators to observe details about the recordings (user info is stored as metadata in the recording mp3 file). This app uses MVVM architecture for encapsulation and the taglib library for mp3 metadata.
 
 2. Contributions:
 

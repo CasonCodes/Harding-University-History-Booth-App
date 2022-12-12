@@ -12,7 +12,8 @@
                     README and implementation notes
                               
           Cason Kirschner:
-                    
+                    Views (XAML and design work)
+                    Codebehind logic for the Views
 
 3. Work Percentage:
 

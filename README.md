@@ -12,10 +12,10 @@
                     README and implementation notes
                               
           Cason Kirschner:
+                    
 
 3. Work Percentage:
 
-          Noah Overton: 
+          Noah Overton: 50%
           
-          Cason Kirschner: 
-          
+          Cason Kirschner: 50%

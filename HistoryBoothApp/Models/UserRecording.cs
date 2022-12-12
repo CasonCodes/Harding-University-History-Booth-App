@@ -12,5 +12,15 @@ namespace HistoryBoothApp.Models
 
         //property for the recording mp3 itself
         public TagLib.File recording { get; set; }
+
+        //public TagLib.File ReadRecording()
+        //{
+        //    return recording;
+        //}
+
+        //public bool WriteRecording(TagLib.File value)
+        //{
+        //    return true;
+        //}
     }
 }

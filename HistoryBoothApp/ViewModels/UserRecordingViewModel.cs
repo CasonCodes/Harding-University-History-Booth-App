@@ -1,10 +1,7 @@
 ﻿using HistoryBoothApp.Models;
-using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HistoryBoothApp.ViewModels
 {
@@ -13,7 +10,7 @@ namespace HistoryBoothApp.ViewModels
         public event PropertyChangedEventHandler PropertyChanged;
         private UserRecording userRecording;
 
-        public UserRecordingViewModel() 
+        public UserRecordingViewModel()
         {
             userRecording = new UserRecording();
         }
@@ -56,10 +53,56 @@ namespace HistoryBoothApp.ViewModels
                 OnPropertyChanged("wasStudent");
             }
         }
-        
+
+        public List<string> customTag
+        {
+            get
+            {
+                return userRecording.customTag;
+            }
+            set
+            {
+                userRecording.customTag = value;
+                OnPropertyChanged("customTag");
+            }
+        }
+
+        public string description
+        {
+            get
+            {
+                return userRecording.description;
+            }
+            set
+            {
+                userRecording.description = value;
+                OnPropertyChanged("description");
+            }
+        }
+
+        public TagLib.File recording
+        {
+            get
+            {
+                return userRecording.recording;
+            }
+            set
+            {
+                userRecording.recording = value;
+                OnPropertyChanged("recording");
+            }
+        }
 
         //ADD MORE WHEN TAGLIB WORKS
+        //public TagLib.File ReadRecording()
+        //{
+        //    return recording;
+        //}
 
+        //public bool WriteRecording(TagLib.File value)
+        //{
+        //    return true;
+        //}
 
         private void OnPropertyChanged(string property)
         {

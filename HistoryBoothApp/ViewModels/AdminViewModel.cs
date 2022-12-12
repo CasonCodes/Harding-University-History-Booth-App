@@ -1,29 +1,23 @@
 ﻿using HistoryBoothApp.Models;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HistoryBoothApp.ViewModels
 {
     public class AdminViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-
         private Admin admin;
 
         public ObservableCollection<UserRecordingViewModel> userRecordings { get; set; }
 
         public string password
         {
-            get 
+            get
             {
                 return admin.password;
             }
-            set 
+            set
             {
                 admin.password = value;
                 OnPropertyChanged(this, new PropertyChangedEventArgs("password"));

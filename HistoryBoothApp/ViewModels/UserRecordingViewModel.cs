@@ -93,17 +93,6 @@ namespace HistoryBoothApp.ViewModels
             }
         }
 
-        //ADD MORE WHEN TAGLIB WORKS
-        //public TagLib.File ReadRecording()
-        //{
-        //    return recording;
-        //}
-
-        //public bool WriteRecording(TagLib.File value)
-        //{
-        //    return true;
-        //}
-
         private void OnPropertyChanged(string property)
         {
             // Notify any controls bound to the ViewModel that the property changed

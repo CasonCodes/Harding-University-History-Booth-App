@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-FLSKR1U</Machine>
+    <Machine>DESKTOP-CASON</Machine>
     <WindowsUser>Cason</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>463F55C490DFB9BC3BB817EEE0129EB53B18E6905C4FECBA16492EA88A1719A5</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>D0AF4262D1C790BE5EF09A803B076819C868C6A8770055FF89D4A6111D88D039</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>b2a55022-5a05-404e-8321-8d88b6c1bf8d_1.0.0.0_x86__5ee0an5y98fem</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>b2a55022-5a05-404e-8321-8d88b6c1bf8d_5ee0an5y98fem!App</RegisteredUserModeAppID>
     <RegisteredPackageID>b2a55022-5a05-404e-8321-8d88b6c1bf8d</RegisteredPackageID>
@@ -30,359 +30,363 @@
     <AppXManifest Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-11T19:09:42.047</Modified>
+      <Modified>2023-04-26T02:58:33.227</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\HistoryBoothApp.exe">
       <PackagePath>entrypoint\HistoryBoothApp.exe</PackagePath>
-      <Modified>2022-12-11T19:09:41.199</Modified>
+      <Modified>2023-04-26T02:58:32.272</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.13\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2021-10-10T06:49:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
+    <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\taglib-sharp.dll">
+      <PackagePath>taglib-sharp.dll</PackagePath>
+      <Modified>2023-04-25T19:10:31.513</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.22000.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
-      <Modified>2020-12-02T11:52:00.000</Modified>
+      <Modified>2022-07-15T22:17:36.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\blackBackground.JPG">
       <PackagePath>Assets\blackBackground.JPG</PackagePath>
-      <Modified>2022-12-03T07:11:39.910</Modified>
+      <Modified>2023-04-25T19:10:31.194</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\HUbackground.jpg">
       <PackagePath>Assets\HUbackground.jpg</PackagePath>
-      <Modified>2022-12-03T07:11:39.877</Modified>
+      <Modified>2023-04-25T19:10:31.167</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\HUbackground2.jpg">
       <PackagePath>Assets\HUbackground2.jpg</PackagePath>
-      <Modified>2022-12-03T07:11:39.878</Modified>
+      <Modified>2023-04-25T19:10:31.168</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\HUbackground3.jpg">
       <PackagePath>Assets\HUbackground3.jpg</PackagePath>
-      <Modified>2022-12-03T07:11:39.880</Modified>
+      <Modified>2023-04-25T19:10:31.171</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\HUbackground4.jpg">
       <PackagePath>Assets\HUbackground4.jpg</PackagePath>
-      <Modified>2022-12-03T07:11:39.881</Modified>
+      <Modified>2023-04-25T19:10:31.171</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\HUbackground5.jpg">
       <PackagePath>Assets\HUbackground5.jpg</PackagePath>
-      <Modified>2022-12-03T07:11:39.884</Modified>
+      <Modified>2023-04-25T19:10:31.174</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\HUbackground6.jpg">
       <PackagePath>Assets\HUbackground6.jpg</PackagePath>
-      <Modified>2022-12-03T07:11:39.884</Modified>
+      <Modified>2023-04-25T19:10:31.174</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\HUbackground7.jpg">
       <PackagePath>Assets\HUbackground7.jpg</PackagePath>
-      <Modified>2022-12-03T07:11:39.885</Modified>
+      <Modified>2023-04-25T19:10:31.175</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\HUlogo.jpg">
       <PackagePath>Assets\HUlogo.jpg</PackagePath>
-      <Modified>2022-12-03T07:11:39.885</Modified>
+      <Modified>2023-04-25T19:10:31.175</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.886</Modified>
+      <Modified>2023-04-25T19:10:31.175</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\LargeTile.scale-125.png">
       <PackagePath>Assets\LargeTile.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.886</Modified>
+      <Modified>2023-04-25T19:10:31.176</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\LargeTile.scale-150.png">
       <PackagePath>Assets\LargeTile.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.887</Modified>
+      <Modified>2023-04-25T19:10:31.176</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\LargeTile.scale-200.png">
       <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.887</Modified>
+      <Modified>2023-04-25T19:10:31.176</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\LargeTile.scale-400.png">
       <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.888</Modified>
+      <Modified>2023-04-25T19:10:31.177</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\SmallTile.scale-100.png">
       <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.888</Modified>
+      <Modified>2023-04-25T19:10:31.178</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\SmallTile.scale-125.png">
       <PackagePath>Assets\SmallTile.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.889</Modified>
+      <Modified>2023-04-25T19:10:31.178</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\SmallTile.scale-150.png">
       <PackagePath>Assets\SmallTile.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.889</Modified>
+      <Modified>2023-04-25T19:10:31.178</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\SmallTile.scale-200.png">
       <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.890</Modified>
+      <Modified>2023-04-25T19:10:31.179</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\SmallTile.scale-400.png">
       <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.890</Modified>
+      <Modified>2023-04-25T19:10:31.179</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.891</Modified>
+      <Modified>2023-04-25T19:10:31.179</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\SplashScreen.scale-125.png">
       <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.891</Modified>
+      <Modified>2023-04-25T19:10:31.180</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\SplashScreen.scale-150.png">
       <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.892</Modified>
+      <Modified>2023-04-25T19:10:31.180</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.893</Modified>
+      <Modified>2023-04-25T19:10:31.181</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\Square150x150Logo.scale-100.png">
       <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.893</Modified>
+      <Modified>2023-04-25T19:10:31.181</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\Square150x150Logo.scale-125.png">
       <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.894</Modified>
+      <Modified>2023-04-25T19:10:31.182</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\Square150x150Logo.scale-150.png">
       <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.894</Modified>
+      <Modified>2023-04-25T19:10:31.182</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\Square150x150Logo.scale-400.png">
       <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.895</Modified>
+      <Modified>2023-04-25T19:10:31.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.895</Modified>
+      <Modified>2023-04-25T19:10:31.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.896</Modified>
+      <Modified>2023-04-25T19:10:31.184</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.896</Modified>
+      <Modified>2023-04-25T19:10:31.184</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.897</Modified>
+      <Modified>2023-04-25T19:10:31.184</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.897</Modified>
+      <Modified>2023-04-25T19:10:31.185</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.898</Modified>
+      <Modified>2023-04-25T19:10:31.185</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.898</Modified>
+      <Modified>2023-04-25T19:10:31.185</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.898</Modified>
+      <Modified>2023-04-25T19:10:31.186</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.899</Modified>
+      <Modified>2023-04-25T19:10:31.186</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\Square44x44Logo.scale-100.png">
       <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.899</Modified>
+      <Modified>2023-04-25T19:10:31.186</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\Square44x44Logo.scale-125.png">
       <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.900</Modified>
+      <Modified>2023-04-25T19:10:31.187</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\Square44x44Logo.scale-150.png">
       <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.900</Modified>
+      <Modified>2023-04-25T19:10:31.187</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\Square44x44Logo.scale-400.png">
       <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.901</Modified>
+      <Modified>2023-04-25T19:10:31.188</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\Square44x44Logo.targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.902</Modified>
+      <Modified>2023-04-25T19:10:31.188</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\Square44x44Logo.targetsize-24.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.902</Modified>
+      <Modified>2023-04-25T19:10:31.188</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\Square44x44Logo.targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.903</Modified>
+      <Modified>2023-04-25T19:10:31.189</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\Square44x44Logo.targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.903</Modified>
+      <Modified>2023-04-25T19:10:31.189</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\Square44x44Logo.targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.904</Modified>
+      <Modified>2023-04-25T19:10:31.190</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.904</Modified>
+      <Modified>2023-04-25T19:10:31.190</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\StoreLogo.scale-125.png">
       <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.905</Modified>
+      <Modified>2023-04-25T19:10:31.191</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\StoreLogo.scale-150.png">
       <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.905</Modified>
+      <Modified>2023-04-25T19:10:31.191</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\StoreLogo.scale-200.png">
       <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.906</Modified>
+      <Modified>2023-04-25T19:10:31.191</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\StoreLogo.scale-400.png">
       <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.906</Modified>
+      <Modified>2023-04-25T19:10:31.192</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\Wide310x150Logo.scale-100.png">
       <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.907</Modified>
+      <Modified>2023-04-25T19:10:31.192</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\Wide310x150Logo.scale-125.png">
       <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.907</Modified>
+      <Modified>2023-04-25T19:10:31.192</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\Wide310x150Logo.scale-150.png">
       <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.908</Modified>
+      <Modified>2023-04-25T19:10:31.193</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\Wide310x150Logo.scale-400.png">
       <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.909</Modified>
+      <Modified>2023-04-25T19:10:31.193</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2022-12-03T07:11:39.888</Modified>
+      <Modified>2023-04-25T19:10:31.177</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.892</Modified>
+      <Modified>2023-04-25T19:10:31.181</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.895</Modified>
+      <Modified>2023-04-25T19:10:31.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.901</Modified>
+      <Modified>2023-04-25T19:10:31.187</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.902</Modified>
+      <Modified>2023-04-25T19:10:31.189</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-12-03T07:11:39.908</Modified>
+      <Modified>2023-04-25T19:10:31.193</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2022-12-03T07:11:39.915</Modified>
+      <Modified>2023-04-25T19:10:31.199</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\HistoryBoothApp.xr.xml">
       <PackagePath>HistoryBoothApp.xr.xml</PackagePath>
-      <Modified>2022-12-11T14:02:45.506</Modified>
+      <Modified>2023-04-26T02:27:56.243</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-12-11T19:09:41.109</Modified>
+      <Modified>2023-04-26T02:58:32.177</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\AdminPage.xbf">
       <PackagePath>AdminPage.xbf</PackagePath>
-      <Modified>2022-12-11T19:09:41.109</Modified>
+      <Modified>2023-04-26T02:58:32.177</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\ConfirmPage.xbf">
       <PackagePath>ConfirmPage.xbf</PackagePath>
-      <Modified>2022-12-11T19:09:41.109</Modified>
+      <Modified>2023-04-26T02:58:32.177</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\InfoPage.xbf">
       <PackagePath>InfoPage.xbf</PackagePath>
-      <Modified>2022-12-11T19:09:41.109</Modified>
+      <Modified>2023-04-26T02:58:32.177</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\LoginPage.xbf">
       <PackagePath>LoginPage.xbf</PackagePath>
-      <Modified>2022-12-11T19:09:41.110</Modified>
+      <Modified>2023-04-26T02:58:32.177</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-12-11T19:09:41.110</Modified>
+      <Modified>2023-04-26T02:58:32.177</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\RecordPage.xbf">
       <PackagePath>RecordPage.xbf</PackagePath>
-      <Modified>2022-12-11T19:09:41.110</Modified>
+      <Modified>2023-04-26T02:58:32.177</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.22000.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
-      <Modified>2020-12-02T09:52:06.000</Modified>
+      <Modified>2022-07-16T02:53:28.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-12-11T09:58:16.406</Modified>
+      <Modified>2023-04-25T19:14:27.103</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\Core\HistoryBoothApp.exe">
       <PackagePath>HistoryBoothApp.exe</PackagePath>
-      <Modified>2022-12-11T19:09:42.034</Modified>
+      <Modified>2023-04-26T02:58:33.215</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

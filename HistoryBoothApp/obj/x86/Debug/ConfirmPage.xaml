@@ -54,9 +54,9 @@
 
         </StackPanel>
 
-        <StackPanel Margin="20,20,60,20" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" Orientation="Horizontal">
-            <Button x:ConnectionId='4' BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="backButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30"                         >Back</Button>
-            <Button x:ConnectionId='5' BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="finishButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30"                           >Finish</Button>
+        <StackPanel RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" Orientation="Horizontal" Background="Black" CornerRadius="9" Margin="20,20,60,50" BorderBrush="Goldenrod" BorderThickness="3">
+            <Button x:ConnectionId='4' BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="backButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" FontSize="25" Margin="10,10,10,10"                         >Back</Button>
+            <Button x:ConnectionId='5' BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="finishButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" FontSize="25" Margin="10,10,10,10"                           >Finish</Button>
         </StackPanel>
     </RelativePanel>
 </Page>

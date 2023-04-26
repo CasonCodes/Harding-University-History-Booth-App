@@ -28,11 +28,10 @@
                 
             </StackPanel>
         </StackPanel>
-        
-        <StackPanel Margin="20,20,60,20" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" Orientation="Horizontal">
-            <Button BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="changePasswordButton" RelativePanel.LeftOf="logoutButton" RelativePanel.AlignBottomWithPanel="True" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30" Click="changePasswordButton_Click">Change Password</Button>
-            <Button BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="backButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30" Click="backButton_Click">Back</Button>
-            <Button BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="logoutButton" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30" Click="logoutButton_Click">Logout</Button>
+
+        <StackPanel RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" Orientation="Horizontal" Background="Black" CornerRadius="9" Margin="20,20,60,50" BorderBrush="Goldenrod" BorderThickness="3">
+            <Button BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="changePasswordButton" RelativePanel.LeftOf="logoutButton" RelativePanel.AlignBottomWithPanel="True" FontSize="25" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,10,10" Click="changePasswordButton_Click">Change Password</Button>
+            <Button BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="logoutButton" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True" FontSize="25" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,10,10" Click="logoutButton_Click">Logout</Button>
         </StackPanel>
     </RelativePanel>
 

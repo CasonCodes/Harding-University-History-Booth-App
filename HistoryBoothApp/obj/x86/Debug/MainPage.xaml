@@ -8,15 +8,13 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" MinWidth="800" MinHeight="500">
 
-
-
     <RelativePanel>
         <Image x:ConnectionId='2' x:Name="image1" Source="/Assets/HUbackground2.jpg" RelativePanel.AlignLeftWithPanel="True"></Image>
         <Image x:ConnectionId='3' x:Name="image2" Source="/Assets/HUlogo.jpg" RelativePanel.RightOf="image1" Stretch="UniformToFill"></Image>
-        <StackPanel x:ConnectionId='4' Margin="20,20,60,20" x:Name="mainStackPanel" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" Orientation="Horizontal">
-            <Button x:ConnectionId='5' BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="startButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30"                          >Start</Button>
-            <Button x:ConnectionId='6' BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="adminButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30"                          >Admin</Button>
-            <Button x:ConnectionId='7' BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="quitButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30"                         >Quit</Button>
+        <StackPanel x:ConnectionId='4' x:Name="mainStackPanel" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" Orientation="Horizontal" Background="Black" CornerRadius="9" Margin="20,20,60,50" BorderBrush="Goldenrod" BorderThickness="3">
+            <Button x:ConnectionId='5' BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="startButton" FontSize="25" MinWidth="100" MinHeight="60" Width="auto" Height="auto" Margin="10,10,10,10"                          >Start</Button>
+            <Button x:ConnectionId='6' BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="adminButton" FontSize="25" MinWidth="100" MinHeight="60" Width="auto" Height="auto" Margin="10,10,10,10"                          >Admin</Button>
+            <Button x:ConnectionId='7' BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="quitButton" FontSize="25" MinWidth="100" MinHeight="60" Width="auto" Height="auto" Margin="10,10,10,10"                         >Quit</Button>
         </StackPanel>
     </RelativePanel>
     

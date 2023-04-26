@@ -42,11 +42,6 @@ namespace HistoryBoothApp
             Frame.GoBack();
         }
 
-        private void backButton_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.GoBack();
-        }
-
         private void changePasswordButton_Click(object sender, RoutedEventArgs e)
         {
 

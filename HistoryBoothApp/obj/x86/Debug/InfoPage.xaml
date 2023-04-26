@@ -10,24 +10,66 @@
 
     <RelativePanel>
         <Image x:ConnectionId='2' x:Name="image1" Source="/Assets/HUbackground.jpg" Stretch="UniformToFill"></Image>
-        <StackPanel BorderBrush="Black" Background="DarkGray" CornerRadius="9" Padding="20,20,20,20" 
-                    RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
-            <TextBlock>What is your full name?</TextBlock>
-            <TextBox x:ConnectionId='5' x:Name="nameTextBox" Height="auto" Margin="20,20,20,20"></TextBox>            
+        <StackPanel x:ConnectionId='3' x:Name="infoPanel" BorderBrush="Black" Background="DarkGray" CornerRadius="9" Padding="0,20,20,20" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
 
-            <TextBlock>What decade is your story from?</TextBlock>
-            <ComboBox x:ConnectionId='6' x:Name="decadeComboBox"  Width="201" Margin="20,20,20,20"/>
+            
+            
+            
+            <StackPanel x:ConnectionId='6' x:Name="userNamePanel" Orientation="Horizontal" HorizontalAlignment="Center">
 
-            <TextBlock>Were you a student at the time?</TextBlock>
-            <StackPanel Orientation="Horizontal" Width="201" Height="auto" Margin="40,20,0,20">
-                <RadioButton x:ConnectionId='7' x:Name="yesRadioButton" IsTabStop="False" HorizontalAlignment="Center">Yes</RadioButton>
-                <RadioButton x:ConnectionId='8' x:Name="noRadioButton" IsTabStop="False">No</RadioButton>
+                <StackPanel>
+                    <TextBlock HorizontalAlignment="Center">First Name</TextBlock>
+                    <TextBox x:ConnectionId='16' x:Name="firstNameTextBox" Height="auto" Width="200" Margin="20,20,20,20"></TextBox>
+                </StackPanel>
+                
+                <StackPanel>
+                    <TextBlock HorizontalAlignment="Center">Last Name</TextBlock>
+                    <TextBox x:ConnectionId='15' x:Name="lastNameTextBox" Height="auto" Width="200" Margin="20,20,20,20"></TextBox>
+                </StackPanel>
+                
             </StackPanel>
+
+            
+            
+            
+            
+            <StackPanel x:ConnectionId='7' x:Name="storyDetailPanel" Orientation="Horizontal" HorizontalAlignment="Center">
+
+
+                <StackPanel>
+                    <TextBlock HorizontalAlignment="Center">Title of Story</TextBlock>
+                    <TextBox x:ConnectionId='14' x:Name="storyTitleTextBox" Height="auto" Width="200" Margin="20,20,20,20" PlaceholderText="optional..."></TextBox>
+                </StackPanel>
+                
+              
+                <StackPanel>
+                    <TextBlock HorizontalAlignment="Center">Year of Story</TextBlock>
+                    <ComboBox x:ConnectionId='13' x:Name="yearComboBox" Height="auto" Width="200" Margin="20,20,20,20"/>
+                </StackPanel>
+
+                
+            </StackPanel>
+
+
+
+
+
+            <StackPanel x:ConnectionId='8' x:Name="affiliationPanel" Orientation="Horizontal" Height="auto" Margin="50,10,0,10" HorizontalAlignment="Center">
+                <RadioButton x:ConnectionId='9' x:Name="studentRadioButton" IsTabStop="False" HorizontalAlignment="Center">Student</RadioButton>
+                <RadioButton x:ConnectionId='10' x:Name="alumniRadioButton" IsTabStop="False" HorizontalAlignment="Center">Alumni</RadioButton>
+                <RadioButton x:ConnectionId='11' x:Name="facultyRadioButton" IsTabStop="False" HorizontalAlignment="Center">Faculty</RadioButton>
+                <RadioButton x:ConnectionId='12' x:Name="staffRadioButton" IsTabStop="False" HorizontalAlignment="Center">Staff</RadioButton>
+                <!--<RadioButton x:Name="otherRadioButton" IsTabStop="False" HorizontalAlignment="Center">Other</RadioButton>-->
+            </StackPanel>
+            
+            
+            
+            
         </StackPanel>
 
-        <StackPanel Margin="20,20,60,20" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" Orientation="Horizontal">
-            <Button x:ConnectionId='3' BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="backButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30"                         >Back</Button>
-            <Button x:ConnectionId='4' BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="continueButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30"                             >Continue</Button>
+        <StackPanel RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" Orientation="Horizontal" Background="Black" CornerRadius="9" Margin="20,20,60,50" BorderBrush="Goldenrod" BorderThickness="3">
+            <Button x:ConnectionId='4' BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="backButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,10,10" FontSize="25"                         >Back</Button>
+            <Button x:ConnectionId='5' BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="continueButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,10,10" FontSize="25"                             >Continue</Button>
         </StackPanel>
     </RelativePanel>
 </Page>

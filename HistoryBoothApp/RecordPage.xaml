@@ -49,9 +49,9 @@
             
         </StackPanel>
 
-        <StackPanel  Margin="20,20,60,20"  Orientation="Horizontal" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
-            <Button BorderBrush="Black" Background="DarkGray" x:Name="backButton" CornerRadius="9" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30" Click="backButton_Click" Content="Back"></Button>
-            <Button BorderBrush="Black" Background="DarkGray" x:Name="doneButton" CornerRadius="9" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30" Click="doneButton_Click" Content="Done"></Button>
+        <StackPanel Orientation="Horizontal" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignBottomWithPanel="True" Background="Black" CornerRadius="9" Margin="20,20,60,50" BorderBrush="Goldenrod" BorderThickness="3">
+            <Button BorderBrush="Black" Background="DarkGray" x:Name="backButton" CornerRadius="9" MinWidth="80" MinHeight="40" Width="auto" Height="auto" FontSize="25" Margin="10,10,10,10" Click="backButton_Click" Content="Back"></Button>
+            <Button BorderBrush="Black" Background="DarkGray" x:Name="doneButton" CornerRadius="9" MinWidth="80" MinHeight="40" Width="auto" Height="auto" FontSize="25" Margin="10,10,10,10" Click="doneButton_Click" Content="Continue"></Button>
         </StackPanel>
         
     </RelativePanel>

@@ -8,15 +8,13 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" MinWidth="800" MinHeight="500">
 
-
-
     <RelativePanel>
         <Image x:Name="image1" Source="/Assets/HUbackground2.jpg" RelativePanel.AlignLeftWithPanel="True"></Image>
         <Image x:Name="image2" Source="/Assets/HUlogo.jpg" RelativePanel.RightOf="image1" Stretch="UniformToFill"></Image>
-        <StackPanel Margin="20,20,60,20" x:Name="mainStackPanel" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" Orientation="Horizontal">
-            <Button BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="startButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30" Click="startButton_Click">Start</Button>
-            <Button BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="adminButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30" Click="adminButton_Click">Admin</Button>
-            <Button BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="quitButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30" Click="quitButton_Click">Quit</Button>
+        <StackPanel x:Name="mainStackPanel" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" Orientation="Horizontal" Background="Black" CornerRadius="9" Margin="20,20,60,50" BorderBrush="Goldenrod" BorderThickness="3">
+            <Button BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="startButton" FontSize="25" MinWidth="100" MinHeight="60" Width="auto" Height="auto" Margin="10,10,10,10" Click="startButton_Click">Start</Button>
+            <Button BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="adminButton" FontSize="25" MinWidth="100" MinHeight="60" Width="auto" Height="auto" Margin="10,10,10,10" Click="adminButton_Click">Admin</Button>
+            <Button BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="quitButton" FontSize="25" MinWidth="100" MinHeight="60" Width="auto" Height="auto" Margin="10,10,10,10" Click="quitButton_Click">Quit</Button>
         </StackPanel>
     </RelativePanel>
     

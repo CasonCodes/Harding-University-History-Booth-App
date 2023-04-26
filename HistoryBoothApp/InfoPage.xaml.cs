@@ -23,6 +23,8 @@ namespace HistoryBoothApp
     /// </summary>
     public sealed partial class InfoPage : Page
     {
+        private Brush originalColor;
+
         public InfoPage()
         {            
             this.InitializeComponent();
@@ -32,12 +34,12 @@ namespace HistoryBoothApp
             // fetches current year, adds combo box items for
             // each decade from the 1920's to the current decade
             int currentYear = Convert.ToInt32(DateTime.Now.Year.ToString());
-            for (int y = 1920; y < currentYear; y += 10)
-            {                      
-                decadeComboBox.Items.Add(y + "'s");                
-            }         
+            for (int y = 1920; y < currentYear; y++)
+            {
+                yearComboBox.Items.Add(y);                
+            }
 
-
+            originalColor = firstNameTextBox.BorderBrush;
         }
         private async void displayMissingInfoDialog()
         {
@@ -52,12 +54,27 @@ namespace HistoryBoothApp
             await acknowledgement.ShowAsync();
         }
 
+        private bool radioButtonSelected()
+        {
+            return (bool)studentRadioButton.IsChecked
+                || (bool)alumniRadioButton.IsChecked
+                || (bool)facultyRadioButton.IsChecked
+                || (bool)staffRadioButton.IsChecked;
+                //|| (bool)otherRadioButton.IsChecked;
+        }
+
+        private bool allInformationEntered()
+        {
+            return firstNameTextBox.Text != ""
+                && lastNameTextBox.Text != ""
+                && yearComboBox.SelectedIndex != -1
+                && radioButtonSelected();
+        }
+
         private void continueButton_Click(object sender, RoutedEventArgs e)
         {
             // make sure user enters all information before continuing
-            if (nameTextBox.Text != "" 
-                && decadeComboBox.SelectedIndex != -1 
-                && ((bool)yesRadioButton.IsChecked || (bool)noRadioButton.IsChecked))
+            if (allInformationEntered())
             {
                 // TODO: if all info has been entered, assign info
                 // to mp3 file object and navigate to the record page
@@ -66,17 +83,51 @@ namespace HistoryBoothApp
             }
             else
             {
-                if (nameTextBox.Text == "")
+                // TODO: refactor
+
+                if (firstNameTextBox.Text == "")
                 {
-                    nameTextBox.BorderBrush = new SolidColorBrush(Windows.UI.Colors.Red);
+                    firstNameTextBox.BorderBrush = new SolidColorBrush(Windows.UI.Colors.Red);
                 }
-                if (decadeComboBox.SelectedIndex == -1)
+                else
                 {
-                    decadeComboBox.BorderBrush = new SolidColorBrush(Windows.UI.Colors.Red);
+                    firstNameTextBox.BorderBrush = originalColor;
                 }
-                if ((bool)yesRadioButton.IsChecked == false && (bool)noRadioButton.IsChecked == false) {
-                    // wanted to make radio buttons red, but unsuccessful
+
+                if (lastNameTextBox.Text == "")
+                {
+                    lastNameTextBox.BorderBrush = new SolidColorBrush(Windows.UI.Colors.Red);
                 }
+                else
+                {
+                    lastNameTextBox.BorderBrush = originalColor;
+                }
+
+                if (yearComboBox.SelectedIndex == -1)
+                {
+                    yearComboBox.BorderBrush = new SolidColorBrush(Windows.UI.Colors.Red);
+                }
+                else
+                {
+                    yearComboBox.BorderBrush = originalColor;
+                }
+
+                if (radioButtonSelected() == false) {
+                    studentRadioButton.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
+                    alumniRadioButton.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
+                    facultyRadioButton.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
+                    staffRadioButton.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
+                    //otherRadioButton.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
+                }
+                else 
+                {
+                    studentRadioButton.Foreground = originalColor;
+                    alumniRadioButton.Foreground = originalColor;
+                    facultyRadioButton.Foreground = originalColor;
+                    staffRadioButton.Foreground = originalColor;
+                    //otherRadioButton.Foreground = originalColor;
+                }
+
                 displayMissingInfoDialog();
             }
            

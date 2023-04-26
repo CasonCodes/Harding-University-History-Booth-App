@@ -244,3 +244,5 @@ C:\Users\noah_\GitHub\HistoryBoothApp\HistoryBoothApp\obj\x86\Debug\MultipleQual
 C:\Users\noah_\GitHub\HistoryBoothApp\HistoryBoothApp\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\noah_\GitHub\HistoryBoothApp\HistoryBoothApp\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424995200000000.json
 C:\Users\noah_\GitHub\HistoryBoothApp\HistoryBoothApp\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637425067200000000.json
+C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\taglib-sharp.dll
+C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637935202560000000.json

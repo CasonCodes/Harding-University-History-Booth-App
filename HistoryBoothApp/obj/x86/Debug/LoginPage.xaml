@@ -11,13 +11,14 @@
     <RelativePanel>
         <Image x:ConnectionId='2' x:Name="image1" Source="/Assets/HUbackground.jpg" Stretch="UniformToFill"></Image>
         <StackPanel BorderBrush="Black" Background="DarkGray"  CornerRadius="9" Padding="20,20,20,20" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
-            <TextBlock x:ConnectionId='5' x:Name="adminTextBlock" Text="Administrator" RelativePanel.Above="passwordBox" HorizontalAlignment="Center"></TextBlock>
-            <PasswordBox x:ConnectionId='6' x:Name="passwordBox" RelativePanel.AlignVerticalCenterWithPanel="True" RelativePanel.AlignHorizontalCenterWithPanel="True" Width="200" Height="auto" Margin="20,20,20,20"  PlaceholderText="Password" MaxLength="15" InputScope="Password"/>
+            <TextBlock x:ConnectionId='6' x:Name="adminTextBlock" Text="Administrator Login" RelativePanel.Above="passwordBox" HorizontalAlignment="Center"></TextBlock>
+            <PasswordBox x:ConnectionId='7' x:Name="passwordBox" RelativePanel.AlignVerticalCenterWithPanel="True" RelativePanel.AlignHorizontalCenterWithPanel="True" Width="200" Height="auto" Margin="20,20,20,20"                               PlaceholderText="Password" MaxLength="15" InputScope="Password"/>
         </StackPanel>
 
-        <StackPanel Margin="20,20,60,20" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" Orientation="Horizontal">
-            <Button x:ConnectionId='3' BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="backButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30"                         >Back</Button>
-            <Button x:ConnectionId='4' BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="loginButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30"                          >Login</Button>
+        <StackPanel RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" Orientation="Horizontal" Background="Black" CornerRadius="9" Margin="20,20,60,50" BorderBrush="Goldenrod" BorderThickness="3">
+            <Button x:ConnectionId='3' BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="backButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" FontSize="25" Margin="10,10,10,10"                         >Back</Button>
+            <Button x:ConnectionId='4' BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="forgotPasswordButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" FontSize="25" Margin="10,10,10,10"                                   >Forgot Password</Button>
+            <Button x:ConnectionId='5' BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="loginButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" FontSize="25" Margin="10,10,10,10"                          >Login</Button>
         </StackPanel>
     </RelativePanel>
 </Page>

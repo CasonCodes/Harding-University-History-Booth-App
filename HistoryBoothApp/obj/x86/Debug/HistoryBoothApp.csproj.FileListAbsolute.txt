@@ -246,3 +246,17 @@ C:\Users\noah_\GitHub\HistoryBoothApp\HistoryBoothApp\obj\x86\Debug\.winmd_cache
 C:\Users\noah_\GitHub\HistoryBoothApp\HistoryBoothApp\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637425067200000000.json
 C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\taglib-sharp.dll
 C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637935202560000000.json
+C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\BouncyCastle.Cryptography.dll
+C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\MailKit.dll
+C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\MailKit.pdb
+C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\MimeKit.dll
+C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\MimeKit.pdb
+C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\System.Data.DataSetExtensions.dll
+C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\System.Formats.Asn1.dll
+C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\System.Security.Cryptography.Pkcs.dll
+C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\System.Text.Encoding.CodePages.dll
+C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\obj\x86\Debug\FxResources.System.Data.DataSetExtensions.SR.resw
+C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\obj\x86\Debug\FxResources.System.Formats.Asn1.SR.resw
+C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\obj\x86\Debug\FxResources.System.Security.Cryptography.Pkcs.SR.resw
+C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\obj\x86\Debug\FxResources.System.Text.Encoding.CodePages.SR.resw

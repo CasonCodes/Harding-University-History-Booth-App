@@ -111,14 +111,16 @@ namespace HistoryBoothApp
             };                        
 
             dialogBox.Content = passwordBox;
-            await dialogBox.ShowAsync();
+            var result = await dialogBox.ShowAsync();
 
-            if (passwordBox.Password != "")
+            if (passwordBox.Password != "" && result == ContentDialogResult.Primary)
             { 
-                // TODO: update admin password in local settings
+                // save admin password
                 adminPassword = passwordBox.Password;
+                Windows.Storage.ApplicationData.Current.LocalSettings.Values["AdminPassword"] = adminPassword;
+
                 string emailSubject = "Admin Password Updated!";
-                string emailBody = "Your administrative password for the HU History Booth has just been reset to: \n\n\t\t" + passwordBox.Password;
+                string emailBody = "Your administrative password for the HU History Booth has just been reset to: \n\n\t\t" + adminPassword;
                 SendEmail(adminEmail, emailSubject, emailBody);
             }                        
         }

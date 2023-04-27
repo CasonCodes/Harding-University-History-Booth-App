@@ -25,21 +25,23 @@ namespace HistoryBoothApp
     {
         private Brush originalColor;
 
+        private UserStory userStory;
+
         public InfoPage()
         {            
             this.InitializeComponent();
             ApplicationView.PreferredLaunchViewSize = new Size(800, 500);
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
 
-            // fetches current year, adds combo box items for
-            // each decade from the 1920's to the current decade
+            // fetches current year, adds combo box items for every year up until current year
             int currentYear = Convert.ToInt32(DateTime.Now.Year.ToString());
-            for (int y = 1920; y < currentYear; y++)
+            for (int y = 1920; y <= currentYear; y++)
             {
                 yearComboBox.Items.Add(y);                
             }
 
             originalColor = firstNameTextBox.BorderBrush;
+            userStory = new UserStory();
         }
         private async void displayMissingInfoDialog()
         {
@@ -59,8 +61,8 @@ namespace HistoryBoothApp
             return (bool)studentRadioButton.IsChecked
                 || (bool)alumniRadioButton.IsChecked
                 || (bool)facultyRadioButton.IsChecked
-                || (bool)staffRadioButton.IsChecked;
-                //|| (bool)otherRadioButton.IsChecked;
+                || (bool)staffRadioButton.IsChecked
+                || (bool)otherRadioButton.IsChecked;
         }
 
         private bool allInformationEntered()
@@ -77,9 +79,37 @@ namespace HistoryBoothApp
             if (allInformationEntered())
             {
                 // TODO: if all info has been entered, assign info
-                // to mp3 file object and navigate to the record page
-                RecordPage recordPage = new RecordPage();
-                Frame.Navigate(typeof(RecordPage), recordPage);
+                // to UserStory object and navigate to the recording page 
+
+                userStory.date = DateTime.Now;
+                userStory.firstName = firstNameTextBox.Text;
+                userStory.lastName = lastNameTextBox.Text;
+                userStory.title = storyTitleTextBox.Text;
+                userStory.storyYear = yearComboBox.SelectedItem.ToString(); // TODO: ?
+
+                if (studentRadioButton.IsChecked == true)
+                {
+                    userStory.personType = PersonType.student;
+                }
+                else if (alumniRadioButton.IsChecked == true)
+                {
+                    userStory.personType = PersonType.alumni;
+                }
+                else if (facultyRadioButton.IsChecked == true)
+                {
+                    userStory.personType = PersonType.faculty;
+                }
+                else if (staffRadioButton.IsChecked == true)
+                {
+                    userStory.personType = PersonType.staff;
+                }
+                else if (otherRadioButton.IsChecked == true)
+                {
+                    userStory.personType = PersonType.other;
+                }
+
+                //RecordPage recordPage = new RecordPage();
+                Frame.Navigate(typeof(RecordPage), userStory);
             }
             else
             {
@@ -117,7 +147,7 @@ namespace HistoryBoothApp
                     alumniRadioButton.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
                     facultyRadioButton.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
                     staffRadioButton.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
-                    //otherRadioButton.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
+                    otherRadioButton.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
                 }
                 else 
                 {
@@ -125,7 +155,7 @@ namespace HistoryBoothApp
                     alumniRadioButton.Foreground = originalColor;
                     facultyRadioButton.Foreground = originalColor;
                     staffRadioButton.Foreground = originalColor;
-                    //otherRadioButton.Foreground = originalColor;
+                    otherRadioButton.Foreground = originalColor;
                 }
 
                 displayMissingInfoDialog();

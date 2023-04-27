@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>D0AF4262D1C790BE5EF09A803B076819C868C6A8770055FF89D4A6111D88D039</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>243A11B1C00ED11E56E6A964864EA0AAAF854CBED6AC86188C919C2F4BCE5BBE</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>b2a55022-5a05-404e-8321-8d88b6c1bf8d_1.0.0.0_x86__5ee0an5y98fem</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>b2a55022-5a05-404e-8321-8d88b6c1bf8d_5ee0an5y98fem!App</RegisteredUserModeAppID>
     <RegisteredPackageID>b2a55022-5a05-404e-8321-8d88b6c1bf8d</RegisteredPackageID>
@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-04-26T20:12:03.684</Modified>
+      <Modified>2023-04-27T15:48:51.410</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\HistoryBoothApp.exe">
       <PackagePath>entrypoint\HistoryBoothApp.exe</PackagePath>
-      <Modified>2023-04-26T20:12:03.059</Modified>
+      <Modified>2023-04-27T15:48:50.423</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\.nuget\packages\bouncycastle.cryptography\2.1.1\lib\netstandard2.0\BouncyCastle.Cryptography.dll">
       <PackagePath>BouncyCastle.Cryptography.dll</PackagePath>
@@ -378,35 +378,35 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\HistoryBoothApp.xr.xml">
       <PackagePath>HistoryBoothApp.xr.xml</PackagePath>
-      <Modified>2023-04-26T02:27:56.243</Modified>
+      <Modified>2023-04-27T08:21:28.938</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2023-04-26T20:12:02.979</Modified>
+      <Modified>2023-04-27T15:48:50.331</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\AdminPage.xbf">
       <PackagePath>AdminPage.xbf</PackagePath>
-      <Modified>2023-04-26T20:12:02.979</Modified>
+      <Modified>2023-04-27T15:48:50.331</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\ConfirmPage.xbf">
       <PackagePath>ConfirmPage.xbf</PackagePath>
-      <Modified>2023-04-26T20:12:02.979</Modified>
+      <Modified>2023-04-27T15:48:50.325</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\InfoPage.xbf">
       <PackagePath>InfoPage.xbf</PackagePath>
-      <Modified>2023-04-26T20:12:02.979</Modified>
+      <Modified>2023-04-27T15:48:50.331</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\LoginPage.xbf">
       <PackagePath>LoginPage.xbf</PackagePath>
-      <Modified>2023-04-26T20:12:02.979</Modified>
+      <Modified>2023-04-27T15:48:50.331</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2023-04-26T20:12:02.979</Modified>
+      <Modified>2023-04-27T15:48:50.332</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\RecordPage.xbf">
       <PackagePath>RecordPage.xbf</PackagePath>
-      <Modified>2023-04-26T20:12:02.979</Modified>
+      <Modified>2023-04-27T15:48:50.332</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.22000.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -414,11 +414,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-04-26T19:05:35.194</Modified>
+      <Modified>2023-04-27T06:46:40.794</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Cason\Documents\GitHub\HistoryBoothApp\HistoryBoothApp\bin\x86\Debug\Core\HistoryBoothApp.exe">
       <PackagePath>HistoryBoothApp.exe</PackagePath>
-      <Modified>2023-04-26T20:12:03.681</Modified>
+      <Modified>2023-04-27T15:48:51.402</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

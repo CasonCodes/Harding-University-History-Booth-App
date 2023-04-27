@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -23,6 +24,10 @@ namespace HistoryBoothApp
     /// </summary>
     public sealed partial class ConfirmPage : Page
     {
+        private List<string> selectedTags = new List<string>();
+        private Brush originalColor;
+        UserStory userStory;
+        int currentYear;
         public ConfirmPage()
         {
             this.InitializeComponent();
@@ -31,15 +36,45 @@ namespace HistoryBoothApp
 
             // fetches current year, adds combo box items for
             // each decade from the 1920's to the current decade
-            int currentYear = Convert.ToInt32(DateTime.Now.Year.ToString());
-            for (int y = 1920; y < currentYear; y += 10)
+            currentYear = Convert.ToInt32(DateTime.Now.Year.ToString());
+            for (int y = 1920; y <= currentYear; y++)
             {
-                decadeComboBox.Items.Add(y + "'s");
+                yearComboBox.Items.Add(y);
             }
 
-            // TODO: load mp3 file meta data to show all user information together
+            originalColor = firstNameTextBox.BorderBrush;
+
+
+
+
+            for (int i = 0; i < 1; i++)
+            {
+                selectedTags.Add(userStory.tags[i]);
+            }
             
 
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+
+            // Retrieve the userStory object from the NavigationEventArgs parameter
+            userStory = (UserStory)e.Parameter;
+
+            // TODO: display user story info
+            firstNameTextBox.Text = userStory.firstName;
+            lastNameTextBox.Text = userStory.lastName;
+            storyTitleTextBox.Text = userStory.title;
+            yearComboBox.SelectedIndex = currentYear - Int32.Parse(userStory.storyYear);
+            switch (userStory.personType)
+            {
+                case PersonType.student: studentRadioButton.IsChecked = true; break;
+                case PersonType.alumni: alumniRadioButton.IsChecked = true; break;
+                case PersonType.staff: staffRadioButton.IsChecked = true; break;
+                case PersonType.faculty: facultyRadioButton.IsChecked = true; break;
+                case PersonType.other: otherRadioButton.IsChecked = true; break;
+            }
         }
 
         private async void displayConfirmDialog()
@@ -61,6 +96,60 @@ namespace HistoryBoothApp
             await acknowledgement.ShowAsync();
         }
 
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            foreach (var addedItem in e.AddedItems)
+            {
+                // Add the selected item to the collection of selected tags
+            }
+
+            foreach (var removedItem in e.RemovedItems)
+            {
+                // Remove the deselected item from the collection of selected tags
+            }
+        }
+
+
+
+        private void SaveAllFields()
+        {
+            // make sure user enters all information before continuing
+            if (allInformationEntered())
+            {
+                // assign info to UserStory object 
+                userStory.date = DateTime.Now;
+                userStory.firstName = firstNameTextBox.Text;
+                userStory.lastName = lastNameTextBox.Text;
+                userStory.title = storyTitleTextBox.Text;
+                userStory.storyYear = yearComboBox.SelectedItem.ToString();
+                userStory.description = descriptionTextBox.Text;
+                for (int i = 0; i < storyTagsComboBox.Items.Count; i++)
+                {
+                    // TODO: collect and save all tags clicked on by user in combo bos
+                }
+                if (studentRadioButton.IsChecked == true)
+                {
+                    userStory.personType = PersonType.student;
+                }
+                else if (alumniRadioButton.IsChecked == true)
+                {
+                    userStory.personType = PersonType.alumni;
+                }
+                else if (facultyRadioButton.IsChecked == true)
+                {
+                    userStory.personType = PersonType.faculty;
+                }
+                else if (staffRadioButton.IsChecked == true)
+                {
+                    userStory.personType = PersonType.staff;
+                }
+                else if (otherRadioButton.IsChecked == true)
+                {
+                    userStory.personType = PersonType.other;
+                }
+            }
+        }
+
         private void OnPrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
         {
             // TODO: save mp3 file and metadata
@@ -69,6 +158,12 @@ namespace HistoryBoothApp
 
             // TODO: return to the main page (clear all the metadata)
             // maybe in onNavigatedTo() in MainPage, clear all data 
+
+
+
+
+            SaveAllFields();
+
             Frame.GoBack();
             Frame.GoBack();
             Frame.GoBack();
@@ -87,19 +182,111 @@ namespace HistoryBoothApp
             await acknowledgement.ShowAsync();
         }
 
+        private bool radioButtonSelected()
+        {
+            return (bool)studentRadioButton.IsChecked
+                || (bool)alumniRadioButton.IsChecked
+                || (bool)facultyRadioButton.IsChecked
+                || (bool)staffRadioButton.IsChecked
+                || (bool)otherRadioButton.IsChecked;
+        }
+
+        private bool allInformationEntered()
+        {
+            return firstNameTextBox.Text != ""
+                && lastNameTextBox.Text != ""
+                && yearComboBox.SelectedIndex != -1
+                && radioButtonSelected();
+        }
+
         private void finishButton_Click(object sender, RoutedEventArgs e)
         {
-            // make sure user didnt clear out the information           
-            if (nameTextBox.Text == "")
+            // make sure user enters all information before continuing
+            if (allInformationEntered())
             {
-                nameTextBox.BorderBrush = new SolidColorBrush(Windows.UI.Colors.Red);
-                displayMissingInfoDialog();
+                // TODO: if all info has been entered, assign info
+                // to UserStory object and navigate to the recording page 
+
+                userStory.date = DateTime.Now;
+                userStory.firstName = firstNameTextBox.Text;
+                userStory.lastName = lastNameTextBox.Text;
+                userStory.title = storyTitleTextBox.Text;
+                userStory.storyYear = yearComboBox.SelectedItem.ToString(); // TODO: ?
+
+                if (studentRadioButton.IsChecked == true)
+                {
+                    userStory.personType = PersonType.student;
+                }
+                else if (alumniRadioButton.IsChecked == true)
+                {
+                    userStory.personType = PersonType.alumni;
+                }
+                else if (facultyRadioButton.IsChecked == true)
+                {
+                    userStory.personType = PersonType.faculty;
+                }
+                else if (staffRadioButton.IsChecked == true)
+                {
+                    userStory.personType = PersonType.staff;
+                }
+                else if (otherRadioButton.IsChecked == true)
+                {
+                    userStory.personType = PersonType.other;
+                }
+
+                displayConfirmDialog();
+
             }
             else
             {
-                // show confirm dialog
-                displayConfirmDialog();                
-            }            
+                // TODO: refactor
+
+                if (firstNameTextBox.Text == "")
+                {
+                    firstNameTextBox.BorderBrush = new SolidColorBrush(Windows.UI.Colors.Red);
+                }
+                else
+                {
+                    firstNameTextBox.BorderBrush = originalColor;
+                }
+
+                if (lastNameTextBox.Text == "")
+                {
+                    lastNameTextBox.BorderBrush = new SolidColorBrush(Windows.UI.Colors.Red);
+                }
+                else
+                {
+                    lastNameTextBox.BorderBrush = originalColor;
+                }
+
+                if (yearComboBox.SelectedIndex == -1)
+                {
+                    yearComboBox.BorderBrush = new SolidColorBrush(Windows.UI.Colors.Red);
+                }
+                else
+                {
+                    yearComboBox.BorderBrush = originalColor;
+                }
+
+                if (radioButtonSelected() == false)
+                {
+                    studentRadioButton.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
+                    alumniRadioButton.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
+                    facultyRadioButton.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
+                    staffRadioButton.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
+                    otherRadioButton.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
+                }
+                else
+                {
+                    studentRadioButton.Foreground = originalColor;
+                    alumniRadioButton.Foreground = originalColor;
+                    facultyRadioButton.Foreground = originalColor;
+                    staffRadioButton.Foreground = originalColor;
+                    otherRadioButton.Foreground = originalColor;
+                }
+
+                displayMissingInfoDialog();
+            }
         }
 
         private void backButton_Click(object sender, RoutedEventArgs e)

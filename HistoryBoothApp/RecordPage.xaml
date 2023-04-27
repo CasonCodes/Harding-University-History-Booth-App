@@ -11,17 +11,19 @@
     <RelativePanel>
         <Image x:Name="image1" Source="/Assets/HUbackground2.jpg" RelativePanel.AlignLeftWithPanel="True"  ></Image>
         <Image x:Name="image2" Source="/Assets/blackBackground.jpg" RelativePanel.RightOf="image1" Stretch="UniformToFill"></Image>
+        <ComboBox x:Name="outputDevicesComboBox" Width="120" RelativePanel.AlignRightWithPanel="true"/>
 
         <StackPanel RelativePanel.AlignHorizontalCenterWith="image2" RelativePanel.AlignVerticalCenterWith="image2" 
-                    Background="DarkGray" CornerRadius="9" Padding="20,20,20,20" Width="850" Height="585">
+                    Background="DarkGray" CornerRadius="9" Padding="20,20,20,20" Width="850" Height="510">
+
+            <TextBlock HorizontalAlignment="Center" Margin="20,20,20,20" FontSize="22" >Record your Story</TextBlock>
+
 
             <StackPanel Background="DimGray" CornerRadius="9" Padding="20,20,20,20">
-
-                <TextBlock HorizontalAlignment="Left" Width="100" Text="Record"></TextBlock>
                
             
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Background="Goldenrod"  CornerRadius="9" Padding="40,20,40,20" Margin="30">
-                    <TextBlock x:Name="minuteTextBlock" FontSize="70">00</TextBlock>
+                    <TextBlock x:Name="minuteTextBlock" FontSize="70">0</TextBlock>
                     <TextBlock FontSize="70">:</TextBlock>
                     <TextBlock x:Name="secondTextBlock" FontSize="70">00</TextBlock>
                 </StackPanel>
@@ -42,10 +44,7 @@
 
             </StackPanel>
 
-            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Background="DimGray" CornerRadius="9" Padding="20,20,20,20" Margin="0,20,0,0">
-                <TextBlock HorizontalAlignment="Left" Width="100" Text="Listen"></TextBlock>
-                <MediaElement x:Name="mediaElement" Height="100" Width="780" AreTransportControlsEnabled="True" AudioCategory="BackgroundCapableMedia"/>
-            </StackPanel>
+           
             
         </StackPanel>
 
@@ -54,5 +53,6 @@
             <Button BorderBrush="Black" Background="DarkGray" x:Name="doneButton" CornerRadius="9" MinWidth="80" MinHeight="40" Width="auto" Height="auto" FontSize="25" Margin="10,10,10,10" Click="doneButton_Click" Content="Continue"></Button>
         </StackPanel>
         
+
     </RelativePanel>
 </Page>

@@ -21,35 +21,74 @@
         </Image>
         <Image x:Name="image2" Source="/Assets/blackBackground.jpg" Width="800" Stretch="Fill" RelativePanel.AlignRightWithPanel="True"/>
 
-        <StackPanel RelativePanel.AlignHorizontalCenterWith="image2" RelativePanel.AlignVerticalCenterWith="image2"
-                    BorderBrush="Black" Background="DarkGray" CornerRadius="9" Padding="20,20,20,20">
-            
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Full Name:" Margin="0,0,20,0" VerticalAlignment="Center"></TextBlock>
-                <TextBox x:Name="nameTextBox" Width="345"></TextBox>
-            </StackPanel>
-            
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Decade of Story:" Margin="0,0,20,0" VerticalAlignment="Center"></TextBlock>
-                <ComboBox x:Name="decadeComboBox"  Width="289" Margin="20,20,20,20"/>
-            </StackPanel>        
-            
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
-                <TextBlock Text="Custom Tags:" Margin="0,0,20,0" VerticalAlignment="Center"></TextBlock>
-                <TextBox Width="329" PlaceholderText="optional..."></TextBox>
-            </StackPanel>
-            
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Description:" Margin="0,0,20,0" VerticalAlignment="Center"></TextBlock>
-                <TextBox Width="337" PlaceholderText="optional..."></TextBox>
+        <StackPanel x:Name="infoPanel" BorderBrush="Black" Background="DarkGray" CornerRadius="9" Margin="0,0,63,0" Padding="0,20,20,20" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
+
+            <TextBlock HorizontalAlignment="Center" Margin="20,20,20,20" FontSize="22" >Confirm Story Information</TextBlock>
+
+
+
+            <StackPanel x:Name="userNamePanel" Orientation="Horizontal" HorizontalAlignment="Center">
+
+                <StackPanel>
+                    <TextBlock HorizontalAlignment="Center">First Name</TextBlock>
+                    <TextBox x:Name="firstNameTextBox" Height="auto" Width="200" Margin="20,20,20,20"></TextBox>
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock HorizontalAlignment="Center">Last Name</TextBlock>
+                    <TextBox x:Name="lastNameTextBox" Height="auto" Width="200" Margin="20,20,20,20"></TextBox>
+                </StackPanel>
+
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Student Status:" Margin="0,0,20,0" VerticalAlignment="Center"></TextBlock>
-                <StackPanel Orientation="Horizontal" Width="280" Height="auto" Margin="40,20,0,20">
-                    <RadioButton x:Name="yesRadioButton" IsTabStop="False" HorizontalAlignment="Center">Yes</RadioButton>
-                    <RadioButton x:Name="noRadioButton" IsTabStop="False">No</RadioButton>
+
+
+
+
+            <StackPanel x:Name="storyDetailPanel" Orientation="Horizontal" HorizontalAlignment="Center">
+
+
+                <StackPanel>
+                    <TextBlock HorizontalAlignment="Center">Title of Story</TextBlock>
+                    <TextBox x:Name="storyTitleTextBox" Height="auto" Width="200" Margin="20,20,20,20" PlaceholderText="optional..."></TextBox>
                 </StackPanel>
+
+
+                <StackPanel>
+                    <TextBlock HorizontalAlignment="Center">Year of Story</TextBlock>
+                    <ComboBox x:Name="yearComboBox" Height="auto" Width="200" Margin="20,20,20,20"/>
+                </StackPanel>
+
+
+            </StackPanel>
+
+
+
+
+
+            <StackPanel x:Name="affiliationPanel" Orientation="Horizontal" Height="auto" Margin="50,10,0,10" HorizontalAlignment="Center">
+                <RadioButton x:Name="studentRadioButton" IsTabStop="False" HorizontalAlignment="Center">Student</RadioButton>
+                <RadioButton x:Name="alumniRadioButton" IsTabStop="False" HorizontalAlignment="Center">Alumni</RadioButton>
+                <RadioButton x:Name="facultyRadioButton" IsTabStop="False" HorizontalAlignment="Center">Faculty</RadioButton>
+                <RadioButton x:Name="staffRadioButton" IsTabStop="False" HorizontalAlignment="Center">Staff</RadioButton>
+                <RadioButton x:Name="otherRadioButton" IsTabStop="False" HorizontalAlignment="Center">Other</RadioButton>
+            </StackPanel>
+
+            <StackPanel HorizontalAlignment="Center">
+                <TextBlock HorizontalAlignment="Center" Margin="20,20,20,20">Story Tags</TextBlock>
+                <ComboBox x:Name="storyTagsComboBox" HorizontalAlignment="Center" Width="400" PlaceholderForeground="LightGray" PlaceholderText="optional..." SelectionChanged="ComboBox_SelectionChanged">
+                    <CheckBox Content="Social Clubs"/>
+                    <CheckBox Content="Dorm Life"/>
+                    <CheckBox Content="Chapel"/>
+                    <CheckBox Content="Study Abroad"/>
+                    <CheckBox Content="Yearbook"/>
+                    <CheckBox Content="Sports"/>
+                </ComboBox>
+                <TextBlock HorizontalAlignment="Center" Margin="20,20,20,20">Description</TextBlock>
+
+                <TextBox x:Name="descriptionTextBox" Width="300" Margin="20,0,20,20" PlaceholderText="optional..." TextWrapping="Wrap" MaxLength="400">
+                    
+                </TextBox>
             </StackPanel>
 
         </StackPanel>

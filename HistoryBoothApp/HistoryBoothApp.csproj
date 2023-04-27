@@ -122,6 +122,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AudioRecorder.cs" />
     <Compile Include="ConfirmPage.xaml.cs">
       <DependentUpon>ConfirmPage.xaml</DependentUpon>
     </Compile>
@@ -138,6 +139,7 @@
     <Compile Include="RecordPage.xaml.cs">
       <DependentUpon>RecordPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserStory.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">

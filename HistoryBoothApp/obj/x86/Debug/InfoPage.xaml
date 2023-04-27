@@ -12,19 +12,20 @@
         <Image x:ConnectionId='2' x:Name="image1" Source="/Assets/HUbackground.jpg" Stretch="UniformToFill"></Image>
         <StackPanel x:ConnectionId='3' x:Name="infoPanel" BorderBrush="Black" Background="DarkGray" CornerRadius="9" Padding="0,20,20,20" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
 
-            
-            
-            
+
+            <TextBlock HorizontalAlignment="Center" Margin="20,20,20,20" FontSize="22" >Story Information</TextBlock>
+
+
             <StackPanel x:ConnectionId='6' x:Name="userNamePanel" Orientation="Horizontal" HorizontalAlignment="Center">
 
                 <StackPanel>
                     <TextBlock HorizontalAlignment="Center">First Name</TextBlock>
-                    <TextBox x:ConnectionId='16' x:Name="firstNameTextBox" Height="auto" Width="200" Margin="20,20,20,20"></TextBox>
+                    <TextBox x:ConnectionId='17' x:Name="firstNameTextBox" Height="auto" Width="200" Margin="20,20,20,20"></TextBox>
                 </StackPanel>
                 
                 <StackPanel>
                     <TextBlock HorizontalAlignment="Center">Last Name</TextBlock>
-                    <TextBox x:ConnectionId='15' x:Name="lastNameTextBox" Height="auto" Width="200" Margin="20,20,20,20"></TextBox>
+                    <TextBox x:ConnectionId='16' x:Name="lastNameTextBox" Height="auto" Width="200" Margin="20,20,20,20"></TextBox>
                 </StackPanel>
                 
             </StackPanel>
@@ -38,13 +39,13 @@
 
                 <StackPanel>
                     <TextBlock HorizontalAlignment="Center">Title of Story</TextBlock>
-                    <TextBox x:ConnectionId='14' x:Name="storyTitleTextBox" Height="auto" Width="200" Margin="20,20,20,20" PlaceholderText="optional..."></TextBox>
+                    <TextBox x:ConnectionId='15' x:Name="storyTitleTextBox" Height="auto" Width="200" Margin="20,20,20,20" PlaceholderText="optional..."></TextBox>
                 </StackPanel>
                 
               
                 <StackPanel>
                     <TextBlock HorizontalAlignment="Center">Year of Story</TextBlock>
-                    <ComboBox x:ConnectionId='13' x:Name="yearComboBox" Height="auto" Width="200" Margin="20,20,20,20"/>
+                    <ComboBox x:ConnectionId='14' x:Name="yearComboBox" Height="auto" Width="200" Margin="20,20,20,20"/>
                 </StackPanel>
 
                 
@@ -59,7 +60,7 @@
                 <RadioButton x:ConnectionId='10' x:Name="alumniRadioButton" IsTabStop="False" HorizontalAlignment="Center">Alumni</RadioButton>
                 <RadioButton x:ConnectionId='11' x:Name="facultyRadioButton" IsTabStop="False" HorizontalAlignment="Center">Faculty</RadioButton>
                 <RadioButton x:ConnectionId='12' x:Name="staffRadioButton" IsTabStop="False" HorizontalAlignment="Center">Staff</RadioButton>
-                <!--<RadioButton x:Name="otherRadioButton" IsTabStop="False" HorizontalAlignment="Center">Other</RadioButton>-->
+                <RadioButton x:ConnectionId='13' x:Name="otherRadioButton" IsTabStop="False" HorizontalAlignment="Center">Other</RadioButton>
             </StackPanel>
             
             

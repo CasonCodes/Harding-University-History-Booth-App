@@ -39,13 +39,14 @@ namespace HistoryBoothApp
         private string adminEmail = "spamcason@gmail.com";
 
         // TODO: load custom/default admin password from settings
-        private string adminPassword = "password";
+        private string adminPassword;
 
         public LoginPage()
         {
             this.InitializeComponent();
             ApplicationView.PreferredLaunchViewSize = new Size(800, 500);
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
+            adminPassword = (string)Windows.Storage.ApplicationData.Current.LocalSettings.Values["AdminPassword"];
         }
 
         private async void displayWrongPasswordDialog()
@@ -161,7 +162,7 @@ namespace HistoryBoothApp
                 PrimaryButtonText = "OK",
                 SecondaryButtonText = "Cancel"
             };
-            await dialogBox.ShowAsync();
+            var result = await dialogBox.ShowAsync();
 
             #endregion
 
@@ -170,7 +171,7 @@ namespace HistoryBoothApp
             int userCode = -1;
 
             // if text box is not empty
-            if (textBox.Text != "")
+            if (textBox.Text != "" && result == ContentDialogResult.Primary)
             {
                 // check to make sure user has only entered digits
                 bool validInput = true;
@@ -219,10 +220,12 @@ namespace HistoryBoothApp
 
                 if (passwordBox.Password != "")
                 {
-                    // TODO: update admin password in local settings
+                    // save admin password
                     adminPassword = passwordBox.Password;
+                    Windows.Storage.ApplicationData.Current.LocalSettings.Values["AdminPassword"] = adminPassword;
+
                     emailSubject = "Admin Password Updated!";
-                    emailBody = "Your administrative password for the HU History Booth has just been reset to: \n\n\t\t" + passwordBox.Password;
+                    emailBody = "Your administrative password for the HU History Booth has just been reset to: \n\n\t\t" + adminPassword;
                     SendEmail(adminEmail, emailSubject, emailBody);
                 }
             }

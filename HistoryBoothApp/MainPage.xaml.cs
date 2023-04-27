@@ -32,9 +32,9 @@ namespace HistoryBoothApp
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
 
-            // load any/all mp3 recordings
+            // TODO: load any/all mp3 recordings (probably should be on admin page)
 
-            // initialize mp3 object, pass to info page
+            // TODO: initialize mp3 object, pass to info page (necessary?)
             
 
         }

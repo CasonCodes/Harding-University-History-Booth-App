@@ -24,9 +24,15 @@
 
         <StackPanel RelativePanel.AlignHorizontalCenterWith="image2" RelativePanel.AlignVerticalCenterWith="image2" 
                     BorderBrush="Black" Background="DarkGray" CornerRadius="9" Padding="20,20,20,20" Width="650" Height="800">
+            
+            
+            
             <StackPanel Orientation="Horizontal">
                 
             </StackPanel>
+            
+            
+            
         </StackPanel>
 
         <StackPanel RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" Orientation="Horizontal" Background="Black" CornerRadius="9" Margin="20,20,60,50" BorderBrush="Goldenrod" BorderThickness="3">

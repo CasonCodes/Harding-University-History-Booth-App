@@ -54,18 +54,7 @@ namespace HistoryBoothApp
 
 
 
-            //< ComboBox x: Name = "storyTagsComboBox" HorizontalAlignment = "Center" Width = "400" PlaceholderForeground = "LightGray" PlaceholderText = "optional..." SelectionChanged = "ComboBox_SelectionChanged" >
-            //        < CheckBox Content = "Social Clubs" />
-            //        < CheckBox Content = "Dorm Life" />
-            //        < CheckBox Content = "Chapel" />
-            //        < CheckBox Content = "Study Abroad" />
-            //        < CheckBox Content = "Yearbook" />
-            //        < CheckBox Content = "Sports" />
-            //    </ ComboBox >
-
-
-
-
+           
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -125,10 +114,10 @@ namespace HistoryBoothApp
                 userStory.title = storyTitleTextBox.Text;
                 userStory.storyYear = yearComboBox.SelectedItem.ToString();
                 userStory.description = descriptionTextBox.Text;
-                for (int i = 0; i < tagsAutoSuggestBox.Items.Count; i++)
-                {
-                    // TODO: collect and save all tags clicked on by user in combo bos
-                }
+                //for (int i = 0; i < tagsAutoSuggestBox.Items.Count; i++)
+                //{
+                //    // TODO: collect and save all tags clicked on by user in combo bos
+                //}
                 if (studentRadioButton.IsChecked == true)
                 {
                     userStory.personType = PersonType.student;

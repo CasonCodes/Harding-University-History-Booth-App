@@ -9,6 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" MinWidth="800" MinHeight="500">
 
     <RelativePanel>
+        
         <Image x:Name="image1" Source="/Assets/HUbackground3.jpg" Stretch="UniformToFill" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
@@ -23,10 +24,10 @@
 
         <StackPanel x:Name="infoPanel" BorderBrush="Black" Background="DarkGray" CornerRadius="9" Margin="0,0,63,0" Padding="0,20,20,20" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
 
+            
             <TextBlock HorizontalAlignment="Center" Margin="20,20,20,20" FontSize="22" >Confirm Story Information</TextBlock>
 
-
-
+            
             <StackPanel x:Name="userNamePanel" Orientation="Horizontal" HorizontalAlignment="Center">
 
                 <StackPanel>
@@ -43,11 +44,8 @@
 
 
 
-
-
             <StackPanel x:Name="storyDetailPanel" Orientation="Horizontal" HorizontalAlignment="Center">
-
-
+                
                 <StackPanel>
                     <TextBlock HorizontalAlignment="Center">Title of Story</TextBlock>
                     <TextBox x:Name="storyTitleTextBox" Height="auto" Width="200" Margin="20,20,20,20" PlaceholderText="optional..."></TextBox>
@@ -58,12 +56,9 @@
                     <TextBlock HorizontalAlignment="Center">Year of Story</TextBlock>
                     <ComboBox x:Name="yearComboBox" Height="auto" Width="200" Margin="20,20,20,20"/>
                 </StackPanel>
-
-
+                
             </StackPanel>
-
-
-
+            
 
 
             <StackPanel x:Name="affiliationPanel" Orientation="Horizontal" Height="auto" Margin="50,10,0,10" HorizontalAlignment="Center">
@@ -74,26 +69,69 @@
                 <RadioButton x:Name="otherRadioButton" IsTabStop="False" HorizontalAlignment="Center">Other</RadioButton>
             </StackPanel>
 
+            
+            
             <StackPanel HorizontalAlignment="Center">
+                
+                
+                <!--  AutoSuggestbox of all buildings on campus  -->
+              
+                
+               
                 <TextBlock HorizontalAlignment="Center" Margin="20,20,20,20">Story Tags</TextBlock>
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox>Chapel</CheckBox>
+                    <CheckBox>Devotional</CheckBox>
+                    <CheckBox>Social Clubs</CheckBox>
+                    <CheckBox>Front Lawn</CheckBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox>Yearbook</CheckBox>
+                    <CheckBox>Sports</CheckBox>
+                    <CheckBox>Studying</CheckBox>
+                    <CheckBox>Graduation</CheckBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox>Off Campus</CheckBox>
+                    <CheckBox>Dorm Life</CheckBox>
+                    <CheckBox>Church</CheckBox>
+                    <CheckBox>Study Abroad</CheckBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox>Freshman</CheckBox>
+                    <CheckBox>Sophmore</CheckBox>
+                    <CheckBox>Junior</CheckBox>
+                    <CheckBox>Senior</CheckBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox>Spring</CheckBox>
+                    <CheckBox>Summer</CheckBox>
+                    <CheckBox>Fall</CheckBox>
+                    <CheckBox>Winter</CheckBox>
+                </StackPanel>
 
-                <AutoSuggestBox x:Name="tagsAutoSuggestBox">
-                    
-                </AutoSuggestBox>
-                
-                
+
+
                 <TextBlock HorizontalAlignment="Center" Margin="20,20,20,20">Description</TextBlock>
+                <TextBox x:Name="descriptionTextBox" Width="300" Margin="20,0,20,20" PlaceholderText="optional..." TextWrapping="Wrap" MaxLength="400"/>
 
-                <TextBox x:Name="descriptionTextBox" Width="300" Margin="20,0,20,20" PlaceholderText="optional..." TextWrapping="Wrap" MaxLength="400">
-                    
-                </TextBox>
+                
+                
             </StackPanel>
 
+            
+            
         </StackPanel>
 
+        
+        
         <StackPanel RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" Orientation="Horizontal" Background="Black" CornerRadius="9" Margin="20,20,60,50" BorderBrush="Goldenrod" BorderThickness="3">
             <Button BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="backButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" FontSize="25" Margin="10,10,10,10" Click="backButton_Click">Back</Button>
             <Button BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="finishButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" FontSize="25" Margin="10,10,10,10" Click="finishButton_Click">Finish</Button>
         </StackPanel>
+        
+        
     </RelativePanel>
+    
+    
 </Page>

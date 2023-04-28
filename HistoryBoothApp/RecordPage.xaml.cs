@@ -143,9 +143,9 @@ namespace HistoryBoothApp
                 }
 
                 // TODO: start recording         
-                StorageFile file = await KnownFolders.MusicLibrary.CreateFileAsync("recording.wav", CreationCollisionOption.ReplaceExisting);
-                MediaEncodingProfile profile = MediaEncodingProfile.CreateWav(AudioEncodingQuality.High);
-                await mediaCapture.StartRecordToStorageFileAsync(profile, file);
+                //StorageFile file = await KnownFolders.MusicLibrary.CreateFileAsync("recording.wav", CreationCollisionOption.ReplaceExisting);
+                //MediaEncodingProfile profile = MediaEncodingProfile.CreateWav(AudioEncodingQuality.High);
+                //await mediaCapture.StartRecordToStorageFileAsync(profile, file);
 
 
 

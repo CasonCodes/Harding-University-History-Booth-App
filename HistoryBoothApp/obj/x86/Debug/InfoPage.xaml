@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" MinWidth="800" MinHeight="500" >
 
     <RelativePanel>
-        <Image x:ConnectionId='2' x:Name="image1" Source="/Assets/HUbackground.jpg" Stretch="UniformToFill"></Image>
+        <Image x:ConnectionId='2' x:Name="image1" Source="/Assets/HUbackground5.jpg" Stretch="UniformToFill"></Image>
         <StackPanel x:ConnectionId='3' x:Name="infoPanel" BorderBrush="Black" Background="DarkGray" CornerRadius="9" Padding="0,20,20,20" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
 
 

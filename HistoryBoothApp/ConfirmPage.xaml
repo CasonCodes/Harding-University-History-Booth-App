@@ -76,14 +76,12 @@
 
             <StackPanel HorizontalAlignment="Center">
                 <TextBlock HorizontalAlignment="Center" Margin="20,20,20,20">Story Tags</TextBlock>
-                <ComboBox x:Name="storyTagsComboBox" HorizontalAlignment="Center" Width="400" PlaceholderForeground="LightGray" PlaceholderText="optional..." SelectionChanged="ComboBox_SelectionChanged">
-                    <CheckBox Content="Social Clubs"/>
-                    <CheckBox Content="Dorm Life"/>
-                    <CheckBox Content="Chapel"/>
-                    <CheckBox Content="Study Abroad"/>
-                    <CheckBox Content="Yearbook"/>
-                    <CheckBox Content="Sports"/>
-                </ComboBox>
+
+                <AutoSuggestBox x:Name="tagsAutoSuggestBox">
+                    
+                </AutoSuggestBox>
+                
+                
                 <TextBlock HorizontalAlignment="Center" Margin="20,20,20,20">Description</TextBlock>
 
                 <TextBox x:Name="descriptionTextBox" Width="300" Margin="20,0,20,20" PlaceholderText="optional..." TextWrapping="Wrap" MaxLength="400">

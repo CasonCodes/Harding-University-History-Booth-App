@@ -47,11 +47,24 @@ namespace HistoryBoothApp
 
 
 
-            for (int i = 0; i < 1; i++)
-            {
-                selectedTags.Add(userStory.tags[i]);
-            }
-            
+            //for (int i = 0; i < 1; i++)
+            //{
+            //    selectedTags.Add(userStory.tags[i]);
+            //}
+
+
+
+            //< ComboBox x: Name = "storyTagsComboBox" HorizontalAlignment = "Center" Width = "400" PlaceholderForeground = "LightGray" PlaceholderText = "optional..." SelectionChanged = "ComboBox_SelectionChanged" >
+            //        < CheckBox Content = "Social Clubs" />
+            //        < CheckBox Content = "Dorm Life" />
+            //        < CheckBox Content = "Chapel" />
+            //        < CheckBox Content = "Study Abroad" />
+            //        < CheckBox Content = "Yearbook" />
+            //        < CheckBox Content = "Sports" />
+            //    </ ComboBox >
+
+
+
 
         }
 
@@ -77,6 +90,8 @@ namespace HistoryBoothApp
             }
         }
 
+
+
         private async void displayConfirmDialog()
         {
             ContentDialog acknowledgement = new ContentDialog();
@@ -96,20 +111,7 @@ namespace HistoryBoothApp
             await acknowledgement.ShowAsync();
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            foreach (var addedItem in e.AddedItems)
-            {
-                // Add the selected item to the collection of selected tags
-            }
-
-            foreach (var removedItem in e.RemovedItems)
-            {
-                // Remove the deselected item from the collection of selected tags
-            }
-        }
-
-
+        
 
         private void SaveAllFields()
         {
@@ -123,7 +125,7 @@ namespace HistoryBoothApp
                 userStory.title = storyTitleTextBox.Text;
                 userStory.storyYear = yearComboBox.SelectedItem.ToString();
                 userStory.description = descriptionTextBox.Text;
-                for (int i = 0; i < storyTagsComboBox.Items.Count; i++)
+                for (int i = 0; i < tagsAutoSuggestBox.Items.Count; i++)
                 {
                     // TODO: collect and save all tags clicked on by user in combo bos
                 }

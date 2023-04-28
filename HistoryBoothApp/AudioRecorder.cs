@@ -19,24 +19,24 @@ public class AudioRecorder
     public async Task StartRecording()
     {
         // Create new MediaCapture instance
-        mediaCapture = new MediaCapture();
+        //mediaCapture = new MediaCapture();
 
         // Initialize MediaCapture with desired settings
-        var settings = new MediaCaptureInitializationSettings
-        {
-            StreamingCaptureMode = StreamingCaptureMode.Audio,
-            MediaCategory = MediaCategory.Speech,
-            AudioProcessing = AudioProcessing.Default
-        };
-        await mediaCapture.InitializeAsync(settings);
+        //var settings = new MediaCaptureInitializationSettings
+        //{
+        //    StreamingCaptureMode = StreamingCaptureMode.Audio,
+        //    MediaCategory = MediaCategory.Speech,
+        //    AudioProcessing = AudioProcessing.Default
+        //};
+        //await mediaCapture.InitializeAsync(settings);
 
         // Create new StorageFile for the recording
-        var file = await KnownFolders.MusicLibrary.CreateFileAsync("Recording.mp3", CreationCollisionOption.GenerateUniqueName);
-        recordingFile = file;
+        //var file = await KnownFolders.MusicLibrary.CreateFileAsync("Recording.mp3", CreationCollisionOption.GenerateUniqueName);
+        //recordingFile = file;
 
         // Start recording to the StorageFile
-        var encodingProfile = MediaEncodingProfile.CreateMp3(AudioEncodingQuality.Auto);
-        await mediaCapture.StartRecordToStorageFileAsync(encodingProfile, recordingFile);
+        //var encodingProfile = MediaEncodingProfile.CreateMp3(AudioEncodingQuality.Auto);
+        //await mediaCapture.StartRecordToStorageFileAsync(encodingProfile, recordingFile);
     }
 
     public async Task StopRecording()
@@ -45,16 +45,16 @@ public class AudioRecorder
         await mediaCapture.StopRecordAsync();
 
         // Dispose the MediaCapture instance
-        mediaCapture.Dispose();
-        mediaCapture = null;
+        //mediaCapture.Dispose();
+        //mediaCapture = null;
     }
 
     public async Task SaveRecording()
     {
         // Copy the recording file to the app's LocalFolder
-        var localFolder = ApplicationData.Current.LocalFolder;
-        var copiedFile = await recordingFile.CopyAsync(localFolder, "Recording.mp3", NameCollisionOption.ReplaceExisting);
-        recordingFile = null;
+        //var localFolder = ApplicationData.Current.LocalFolder;
+        //var copiedFile = await recordingFile.CopyAsync(localFolder, "Recording.mp3", NameCollisionOption.ReplaceExisting);
+        //recordingFile = null;
     }
 
     public async Task PauseRecording()
@@ -66,36 +66,36 @@ public class AudioRecorder
     public async Task ResumeRecording()
     {
         // Resume the recording
-        await mediaCapture.ResumeRecordAsync();
+        //await mediaCapture.ResumeRecordAsync();
     }
 
     public async Task EraseRecording()
     {
         // Stop the recording if it's in progress
-        if (mediaCapture != null)
-        {
-            await mediaCapture.StopRecordAsync();
-            mediaCapture.Dispose();
-            mediaCapture = null;
-        }
+        //if (mediaCapture != null)
+        //{
+        //    await mediaCapture.StopRecordAsync();
+        //    mediaCapture.Dispose();
+        //    mediaCapture = null;
+        //}
 
-        // Delete the recording file
-        if (recordingFile != null)
-        {
-            await recordingFile.DeleteAsync();
-            recordingFile = null;
-        }
+        //// Delete the recording file
+        //if (recordingFile != null)
+        //{
+        //    await recordingFile.DeleteAsync();
+        //    recordingFile = null;
+        //}
     }
 
     public async Task PlayRecording()
     {
         // Create new MediaElement and set its source to the recording file
-        var mediaElement = new MediaElement();
-        var stream = await recordingFile.OpenReadAsync();
-        mediaElement.SetSource(stream, recordingFile.ContentType);
+        //var mediaElement = new MediaElement();
+        //var stream = await recordingFile.OpenReadAsync();
+        //mediaElement.SetSource(stream, recordingFile.ContentType);
 
         // Play the recording
-        mediaElement.Play();
+        //mediaElement.Play();
     }
 
     public async Task PausePlayback()

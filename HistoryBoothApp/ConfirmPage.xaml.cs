@@ -6,6 +6,7 @@ using System.Reflection.Metadata;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Media.Capture;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -15,24 +16,20 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
-
 namespace HistoryBoothApp
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class ConfirmPage : Page
     {
-        private List<string> selectedTags = new List<string>();
         private Brush originalColor;
-        UserStory userStory;
+        private UserStory userStory;
         int currentYear;
         public ConfirmPage()
         {
             this.InitializeComponent();
             ApplicationView.PreferredLaunchViewSize = new Size(800, 500);
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
+
+            userStory = new UserStory();
 
             // fetches current year, adds combo box items for
             // each decade from the 1920's to the current decade
@@ -41,45 +38,15 @@ namespace HistoryBoothApp
             {
                 yearComboBox.Items.Add(y);
             }
-
-            originalColor = firstNameTextBox.BorderBrush;
-
-
-
-
-            //for (int i = 0; i < 1; i++)
-            //{
-            //    selectedTags.Add(userStory.tags[i]);
-            //}
-
-
-
            
+            originalColor = firstNameTextBox.BorderBrush;           
         }
 
+        #region STORY_INFO_CODE
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            base.OnNavigatedTo(e);
-
-            // Retrieve the userStory object from the NavigationEventArgs parameter
-            userStory = (UserStory)e.Parameter;
-
-            // TODO: display user story info
-            firstNameTextBox.Text = userStory.firstName;
-            lastNameTextBox.Text = userStory.lastName;
-            storyTitleTextBox.Text = userStory.title;
-            yearComboBox.SelectedIndex = currentYear - Int32.Parse(userStory.storyYear);
-            switch (userStory.personType)
-            {
-                case PersonType.student: studentRadioButton.IsChecked = true; break;
-                case PersonType.alumni: alumniRadioButton.IsChecked = true; break;
-                case PersonType.staff: staffRadioButton.IsChecked = true; break;
-                case PersonType.faculty: facultyRadioButton.IsChecked = true; break;
-                case PersonType.other: otherRadioButton.IsChecked = true; break;
-            }
+            base.OnNavigatedTo(e);         
         }
-
-
 
         private async void displayConfirmDialog()
         {
@@ -98,9 +65,7 @@ namespace HistoryBoothApp
             // if user presses cancel, remain on confirm page
 
             await acknowledgement.ShowAsync();
-        }
-
-        
+        }        
 
         private void SaveAllFields()
         {
@@ -114,10 +79,7 @@ namespace HistoryBoothApp
                 userStory.title = storyTitleTextBox.Text;
                 userStory.storyYear = yearComboBox.SelectedItem.ToString();
                 userStory.description = descriptionTextBox.Text;
-                //for (int i = 0; i < tagsAutoSuggestBox.Items.Count; i++)
-                //{
-                //    // TODO: collect and save all tags clicked on by user in combo bos
-                //}
+                
                 if (studentRadioButton.IsChecked == true)
                 {
                     userStory.personType = PersonType.student;
@@ -138,25 +100,32 @@ namespace HistoryBoothApp
                 {
                     userStory.personType = PersonType.other;
                 }
+
+                // collect and save all checked tags 
+                for (int i = 1; i <= 20; i++)
+                {
+                    string checkBoxName = "tag" + i.ToString();
+                    if (FindName(checkBoxName) is CheckBox checkBox)
+                    {
+                        if (checkBox.IsChecked == true)
+                        {
+                            // save tag to userStory object
+                            userStory.tags.Add(checkBox.Content.ToString()); // TODO: ?
+                        }                                                                      
+                    }
+                }
             }
         }
 
         private void OnPrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
         {
-            // TODO: save mp3 file and metadata
-
-            // TODO: initialize the mp3 object for next user
-
-            // TODO: return to the main page (clear all the metadata)
-            // maybe in onNavigatedTo() in MainPage, clear all data 
-
-
-
-
+            // save userStory object
             SaveAllFields();
 
-            Frame.GoBack();
-            Frame.GoBack();
+            // submit userStory object
+            userStory.submitStory();
+
+            // return to the main page 
             Frame.GoBack();
         }
 
@@ -195,15 +164,12 @@ namespace HistoryBoothApp
             // make sure user enters all information before continuing
             if (allInformationEntered())
             {
-                // TODO: if all info has been entered, assign info
-                // to UserStory object and navigate to the recording page 
-
+                // assign all info to UserStory object
                 userStory.date = DateTime.Now;
                 userStory.firstName = firstNameTextBox.Text;
                 userStory.lastName = lastNameTextBox.Text;
                 userStory.title = storyTitleTextBox.Text;
-                userStory.storyYear = yearComboBox.SelectedItem.ToString(); // TODO: ?
-
+                userStory.storyYear = yearComboBox.SelectedItem.ToString();
                 if (studentRadioButton.IsChecked == true)
                 {
                     userStory.personType = PersonType.student;
@@ -230,33 +196,22 @@ namespace HistoryBoothApp
             }
             else
             {
-                // TODO: refactor
-
-                if (firstNameTextBox.Text == "")
+                switch (firstNameTextBox.Text.Length)
                 {
-                    firstNameTextBox.BorderBrush = new SolidColorBrush(Windows.UI.Colors.Red);
-                }
-                else
-                {
-                    firstNameTextBox.BorderBrush = originalColor;
+                    case 0: firstNameTextBox.BorderBrush = new SolidColorBrush(Windows.UI.Colors.Red); break;
+                    default: firstNameTextBox.BorderBrush = originalColor; break;
                 }
 
-                if (lastNameTextBox.Text == "")
+                switch (lastNameTextBox.Text.Length)
                 {
-                    lastNameTextBox.BorderBrush = new SolidColorBrush(Windows.UI.Colors.Red);
-                }
-                else
-                {
-                    lastNameTextBox.BorderBrush = originalColor;
+                    case 0: lastNameTextBox.BorderBrush = new SolidColorBrush(Windows.UI.Colors.Red); break;
+                    default: lastNameTextBox.BorderBrush = originalColor; break;
                 }
 
-                if (yearComboBox.SelectedIndex == -1)
+                switch (yearComboBox.SelectedIndex)
                 {
-                    yearComboBox.BorderBrush = new SolidColorBrush(Windows.UI.Colors.Red);
-                }
-                else
-                {
-                    yearComboBox.BorderBrush = originalColor;
+                    case -1: yearComboBox.BorderBrush = new SolidColorBrush(Windows.UI.Colors.Red); break;
+                    default: yearComboBox.BorderBrush = originalColor; break;
                 }
 
                 if (radioButtonSelected() == false)
@@ -284,5 +239,109 @@ namespace HistoryBoothApp
         {
             Frame.GoBack();
         }
+
+        #endregion
+
+        #region RECORDING_CODE
+
+        bool brandNewRecording = true;
+        private MediaCapture mediaCapture;
+
+        private void playButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (playButton.Content.ToString() == "▶ Play")
+            {
+                recordButton.Content = "⬤ Record";
+                playButton.Content = "❚❚ Pause";
+                // TODO: play recorded audio back to user
+
+            }
+            else if (playButton.Content.ToString() == "❚❚ Pause")
+            {
+                playButton.Content = "▶ Play";
+                // TODO: pause current audio
+
+            }
+        }
+
+        private void eraseButton_Click(object sender, RoutedEventArgs e)
+        {
+
+
+
+
+
+
+
+
+
+
+
+            // TODO: erase the current recording so user can start over   
+            brandNewRecording = true;
+
+
+
+
+
+
+
+
+
+
+
+
+            if (playButton.Content.ToString() == "❚❚ Pause")
+            {
+                playButton.Content = "▶ Play";
+            }
+            if (recordButton.Content.ToString() == "❚❚ Pause")
+            {
+                recordButton.Content = "⬤ Record";
+            }
+            minuteTextBlock.Text = "00";
+            secondTextBlock.Text = "00";
+        }
+
+        private async void recordButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (recordButton.Content.ToString() == "⬤ Record")
+            {
+                recordButton.Content = "❚❚ Pause";
+                playButton.Content = "▶ Play";
+
+                if (brandNewRecording)
+                {
+                    // TODO: make a new recording
+                    mediaCapture = new MediaCapture();
+                    await mediaCapture.InitializeAsync();
+                    brandNewRecording = false;
+                }
+
+                // TODO: start recording         
+                //StorageFile file = await KnownFolders.MusicLibrary.CreateFileAsync("recording.wav", CreationCollisionOption.ReplaceExisting);
+                //MediaEncodingProfile profile = MediaEncodingProfile.CreateWav(AudioEncodingQuality.High);
+                //await mediaCapture.StartRecordToStorageFileAsync(profile, file);
+
+
+
+            }
+            else if (recordButton.Content.ToString() == "❚❚ Pause")
+            {
+                recordButton.Content = "⬤ Record";
+
+                // TODO: pause the recording
+
+
+
+                if (!brandNewRecording)
+                {
+                    // TODO: append recording NAME FORMAT: userStory(" + userStory.date.ToString() + ").wav 
+                }
+
+            }
+        }
+
+        #endregion
     }
 }

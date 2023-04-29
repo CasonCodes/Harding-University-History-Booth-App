@@ -9,64 +9,107 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" MinWidth="800" MinHeight="500">
 
     <RelativePanel>
+
+        <Image x:ConnectionId='2' x:Name="image1" Source="/Assets/huBackground3.jpg" Stretch="UniformToFill" RenderTransformOrigin="0.5,0.5"/>
+
         
-        <Image x:ConnectionId='2' x:Name="image1" Source="/Assets/HUbackground3.jpg" Stretch="UniformToFill" RenderTransformOrigin="0.5,0.5">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="-1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <Image x:ConnectionId='3' x:Name="image2" Source="/Assets/blackBackground.jpg" Width="800" Stretch="Fill" RelativePanel.AlignRightWithPanel="True"/>
+        <StackPanel RelativePanel.LeftOf="infoPanel" RelativePanel.AlignVerticalCenterWith="infoPanel" Margin="0,0,370,0"
+                    Background="DarkGray" CornerRadius="9" Padding="20,20,20,20" Width="650" Height="510">
 
-        <StackPanel x:ConnectionId='4' x:Name="infoPanel" BorderBrush="Black" Background="DarkGray" CornerRadius="9" Margin="0,0,63,0" Padding="0,20,20,20" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
+            <TextBlock HorizontalAlignment="Center" Margin="20,20,20,20" FontSize="30" >Record your Story</TextBlock>
+
+
+            <StackPanel Background="DimGray" CornerRadius="9" Padding="20,20,20,20">
+
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Background="Goldenrod"  CornerRadius="9" Padding="40,20,40,20" Margin="30">
+                    <TextBlock x:ConnectionId='43' x:Name="minuteTextBlock" FontSize="70">0</TextBlock>
+                    <TextBlock FontSize="70">:</TextBlock>
+                    <TextBlock x:ConnectionId='44' x:Name="secondTextBlock" FontSize="70">00</TextBlock>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBlock Width="150" Text="10:00 Minute Time Limit" HorizontalAlignment="Center"></TextBlock>
+                </StackPanel>
+
+
+                <Slider x:ConnectionId='39' x:Name="recorderSlider" Width="600"/>
+
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button x:ConnectionId='40' BorderBrush="Black" Background="DarkGray" x:Name="recordButton" CornerRadius="9" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30"                            Content="&#11044; Record"></Button>
+                    <Button x:ConnectionId='41' BorderBrush="Black" Background="DarkGray" x:Name="eraseButton" CornerRadius="9" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30"                           Content="&#9724; Erase"></Button>
+                    <Button x:ConnectionId='42' BorderBrush="Black" Background="DarkGray" x:Name="playButton" CornerRadius="9" MinWidth="80" MinHeight="40" Width="auto" Height="auto" Margin="10,10,30,30"                          Content="&#9654; Play"></Button>
+                </StackPanel>
+
+            </StackPanel>
+
+        </StackPanel>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <StackPanel x:ConnectionId='3' x:Name="infoPanel" BorderBrush="Black" Background="DarkGray" CornerRadius="9" Margin="0,0,110,0" Padding="0,20,20,20" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
+
+
+            <TextBlock HorizontalAlignment="Center" Margin="20,20,20,20" FontSize="30" >Story Information</TextBlock>
 
             
-            <TextBlock HorizontalAlignment="Center" Margin="20,20,20,20" FontSize="22" >Confirm Story Information</TextBlock>
-
-            
-            <StackPanel x:ConnectionId='7' x:Name="userNamePanel" Orientation="Horizontal" HorizontalAlignment="Center">
+            <StackPanel x:ConnectionId='6' x:Name="userNamePanel" Orientation="Horizontal" HorizontalAlignment="Center">
 
                 <StackPanel>
                     <TextBlock HorizontalAlignment="Center">First Name</TextBlock>
-                    <TextBox x:ConnectionId='19' x:Name="firstNameTextBox" Height="auto" Width="200" Margin="20,20,20,20"></TextBox>
+                    <TextBox x:ConnectionId='38' x:Name="firstNameTextBox" Height="auto" Width="200" Margin="20,20,20,20"></TextBox>
                 </StackPanel>
 
                 <StackPanel>
                     <TextBlock HorizontalAlignment="Center">Last Name</TextBlock>
-                    <TextBox x:ConnectionId='18' x:Name="lastNameTextBox" Height="auto" Width="200" Margin="20,20,20,20"></TextBox>
+                    <TextBox x:ConnectionId='37' x:Name="lastNameTextBox" Height="auto" Width="200" Margin="20,20,20,20"></TextBox>
                 </StackPanel>
 
             </StackPanel>
 
 
 
-            <StackPanel x:ConnectionId='8' x:Name="storyDetailPanel" Orientation="Horizontal" HorizontalAlignment="Center">
+            <StackPanel x:ConnectionId='7' x:Name="storyDetailPanel" Orientation="Horizontal" HorizontalAlignment="Center">
                 
                 <StackPanel>
                     <TextBlock HorizontalAlignment="Center">Title of Story</TextBlock>
-                    <TextBox x:ConnectionId='17' x:Name="storyTitleTextBox" Height="auto" Width="200" Margin="20,20,20,20" PlaceholderText="optional..."></TextBox>
+                    <TextBox x:ConnectionId='36' x:Name="storyTitleTextBox" Height="auto" Width="200" Margin="20,20,20,20" PlaceholderText="optional..."></TextBox>
                 </StackPanel>
 
 
                 <StackPanel>
                     <TextBlock HorizontalAlignment="Center">Year of Story</TextBlock>
-                    <ComboBox x:ConnectionId='16' x:Name="yearComboBox" Height="auto" Width="200" Margin="20,20,20,20"/>
+                    <ComboBox x:ConnectionId='35' x:Name="yearComboBox" Height="auto" Width="200" Margin="20,20,20,20"/>
                 </StackPanel>
                 
             </StackPanel>
             
 
 
-            <StackPanel x:ConnectionId='9' x:Name="affiliationPanel" Orientation="Horizontal" Height="auto" Margin="50,10,0,10" HorizontalAlignment="Center">
-                <RadioButton x:ConnectionId='11' x:Name="studentRadioButton" IsTabStop="False" HorizontalAlignment="Center">Student</RadioButton>
-                <RadioButton x:ConnectionId='12' x:Name="alumniRadioButton" IsTabStop="False" HorizontalAlignment="Center">Alumni</RadioButton>
-                <RadioButton x:ConnectionId='13' x:Name="facultyRadioButton" IsTabStop="False" HorizontalAlignment="Center">Faculty</RadioButton>
-                <RadioButton x:ConnectionId='14' x:Name="staffRadioButton" IsTabStop="False" HorizontalAlignment="Center">Staff</RadioButton>
-                <RadioButton x:ConnectionId='15' x:Name="otherRadioButton" IsTabStop="False" HorizontalAlignment="Center">Other</RadioButton>
+            <StackPanel x:ConnectionId='8' x:Name="affiliationPanel" Orientation="Horizontal" Height="auto" Margin="50,10,0,10" HorizontalAlignment="Center">
+                <RadioButton x:ConnectionId='30' x:Name="studentRadioButton" IsTabStop="False" HorizontalAlignment="Center">Student</RadioButton>
+                <RadioButton x:ConnectionId='31' x:Name="alumniRadioButton" IsTabStop="False" HorizontalAlignment="Center">Alumni</RadioButton>
+                <RadioButton x:ConnectionId='32' x:Name="facultyRadioButton" IsTabStop="False" HorizontalAlignment="Center">Faculty</RadioButton>
+                <RadioButton x:ConnectionId='33' x:Name="staffRadioButton" IsTabStop="False" HorizontalAlignment="Center">Staff</RadioButton>
+                <RadioButton x:ConnectionId='34' x:Name="otherRadioButton" IsTabStop="False" HorizontalAlignment="Center">Other</RadioButton>
             </StackPanel>
 
             
@@ -80,40 +123,40 @@
                
                 <TextBlock HorizontalAlignment="Center" Margin="20,20,20,20">Story Tags</TextBlock>
                 <StackPanel Orientation="Horizontal">
-                    <CheckBox>Chapel</CheckBox>
-                    <CheckBox>Devotional</CheckBox>
-                    <CheckBox>Social Clubs</CheckBox>
-                    <CheckBox>Front Lawn</CheckBox>
+                    <CheckBox x:ConnectionId='26' x:Name="tag17">Chapel</CheckBox>
+                    <CheckBox x:ConnectionId='27' x:Name="tag18">Devotional</CheckBox>
+                    <CheckBox x:ConnectionId='28' x:Name="tag19">Social Clubs</CheckBox>
+                    <CheckBox x:ConnectionId='29' x:Name="tag20">Front Lawn</CheckBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <CheckBox>Yearbook</CheckBox>
-                    <CheckBox>Sports</CheckBox>
-                    <CheckBox>Studying</CheckBox>
-                    <CheckBox>Graduation</CheckBox>
+                    <CheckBox x:ConnectionId='22' x:Name="tag1">Yearbook</CheckBox>
+                    <CheckBox x:ConnectionId='23' x:Name="tag2">Sports</CheckBox>
+                    <CheckBox x:ConnectionId='24' x:Name="tag3">Studying</CheckBox>
+                    <CheckBox x:ConnectionId='25' x:Name="tag4">Graduation</CheckBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <CheckBox>Off Campus</CheckBox>
-                    <CheckBox>Dorm Life</CheckBox>
-                    <CheckBox>Church</CheckBox>
-                    <CheckBox>Study Abroad</CheckBox>
+                    <CheckBox x:ConnectionId='18' x:Name="tag5">Off Campus</CheckBox>
+                    <CheckBox x:ConnectionId='19' x:Name="tag6">Dorm Life</CheckBox>
+                    <CheckBox x:ConnectionId='20' x:Name="tag7">Church</CheckBox>
+                    <CheckBox x:ConnectionId='21' x:Name="tag8">Study Abroad</CheckBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <CheckBox>Freshman</CheckBox>
-                    <CheckBox>Sophmore</CheckBox>
-                    <CheckBox>Junior</CheckBox>
-                    <CheckBox>Senior</CheckBox>
+                    <CheckBox x:ConnectionId='14' x:Name="tag9">Freshman</CheckBox>
+                    <CheckBox x:ConnectionId='15' x:Name="tag10">Sophmore</CheckBox>
+                    <CheckBox x:ConnectionId='16' x:Name="tag11">Junior</CheckBox>
+                    <CheckBox x:ConnectionId='17' x:Name="tag12">Senior</CheckBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <CheckBox>Spring</CheckBox>
-                    <CheckBox>Summer</CheckBox>
-                    <CheckBox>Fall</CheckBox>
-                    <CheckBox>Winter</CheckBox>
+                    <CheckBox x:ConnectionId='10' x:Name="tag13">Spring</CheckBox>
+                    <CheckBox x:ConnectionId='11' x:Name="tag14">Summer</CheckBox>
+                    <CheckBox x:ConnectionId='12' x:Name="tag15">Fall</CheckBox>
+                    <CheckBox x:ConnectionId='13' x:Name="tag16">Winter</CheckBox>
                 </StackPanel>
 
 
 
                 <TextBlock HorizontalAlignment="Center" Margin="20,20,20,20">Description</TextBlock>
-                <TextBox x:ConnectionId='10' x:Name="descriptionTextBox" Width="300" Margin="20,0,20,20" PlaceholderText="optional..." TextWrapping="Wrap" MaxLength="400"/>
+                <TextBox x:ConnectionId='9' x:Name="descriptionTextBox" Width="300" Margin="20,0,20,20" PlaceholderText="optional..." TextWrapping="Wrap" MaxLength="400"/>
 
                 
                 
@@ -126,8 +169,8 @@
         
         
         <StackPanel RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" Orientation="Horizontal" Background="Black" CornerRadius="9" Margin="20,20,60,50" BorderBrush="Goldenrod" BorderThickness="3">
-            <Button x:ConnectionId='5' BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="backButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" FontSize="25" Margin="10,10,10,10"                         >Back</Button>
-            <Button x:ConnectionId='6' BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="finishButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" FontSize="25" Margin="10,10,10,10"                           >Finish</Button>
+            <Button x:ConnectionId='4' BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="backButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" FontSize="25" Margin="10,10,10,10"                         >Back</Button>
+            <Button x:ConnectionId='5' BorderBrush="Black" Background="DarkGray" CornerRadius="9" x:Name="finishButton" MinWidth="80" MinHeight="40" Width="auto" Height="auto" FontSize="25" Margin="10,10,10,10"                           >Finish</Button>
         </StackPanel>
         
         

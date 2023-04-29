@@ -23,6 +23,16 @@ namespace HistoryBoothApp
         public PersonType personType { get; set; }
         public string description { get; set; }
         public List<string> tags { get; set; }
+        public UserStory()
+        {
+            tags = new List<string>();
+        }
         public StorageFile audioRecording { get; set; }
+
+        public bool submitStory()
+        {
+            // TODO: this
+            return true;
+        }
     }
 }

@@ -16,13 +16,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
-
 namespace HistoryBoothApp
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class MainPage : Page
     {
         public MainPage()
@@ -30,13 +25,7 @@ namespace HistoryBoothApp
             this.InitializeComponent();
             ApplicationView.PreferredLaunchViewSize = new Size(800, 500);
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
-            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
-
-            // TODO: load any/all mp3 recordings (probably should be on admin page)
-
-            // TODO: initialize mp3 object, pass to info page (necessary?)
-            
-
+            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;      
         }
 
         private async void displayAcknowledgement()
@@ -62,8 +51,7 @@ namespace HistoryBoothApp
         private void OnPrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
         {
             // Navigate to the next page if the user clicks the primary button
-            InfoPage infoPage = new InfoPage();
-            Frame.Navigate(typeof(InfoPage), infoPage);
+            Frame.Navigate(typeof(ConfirmPage));
         }
 
         private void startButton_Click(object sender, RoutedEventArgs e)

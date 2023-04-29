@@ -17,13 +17,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
-
 namespace HistoryBoothApp
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class LoginPage : Page
     {
         // -----------------------------------------
@@ -31,22 +26,32 @@ namespace HistoryBoothApp
         // -----------------------------------------
         // username: hu.history.booth@gmail.com    
         // password: HistoryBoothHU!               
-        // TODO: change phone number and recovery
-        //       email address on google account
         // -----------------------------------------
 
-        // TODO: get Brackett Library email
-        private string adminEmail = "spamcason@gmail.com";
-
-        // TODO: load custom/default admin password from settings
+        // admin email for password reset
+        private string adminEmail = "ckirschner@harding.edu";
         private string adminPassword;
+        private Brush originalColor;
 
         public LoginPage()
         {
             this.InitializeComponent();
             ApplicationView.PreferredLaunchViewSize = new Size(800, 500);
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
-            adminPassword = (string)Windows.Storage.ApplicationData.Current.LocalSettings.Values["AdminPassword"];
+            
+            originalColor = passwordBox.BorderBrush;
+
+            // if custom password exists...
+            if (Windows.Storage.ApplicationData.Current.LocalSettings.Values.ContainsKey("AdminPassword"))
+            {
+                // retrieve stored password
+                adminPassword = (string)Windows.Storage.ApplicationData.Current.LocalSettings.Values["AdminPassword"];
+            }
+            else
+            {
+                // otherwise set to default password
+                adminPassword = "password";
+            }
         }
 
         private async void displayWrongPasswordDialog()
@@ -67,6 +72,7 @@ namespace HistoryBoothApp
             // if correct password, navigate to admin page
             if (passwordBox.Password == adminPassword)
             {
+                passwordBox.BorderBrush = originalColor;
                 AdminPage adminPage = new AdminPage();
                 Frame.Navigate(typeof(AdminPage), adminPage);
             }
@@ -90,7 +96,7 @@ namespace HistoryBoothApp
 
             // this is an app specific SMTP password
             string emailFromPassword = "vakkcvucemwnoukp";
-            // the actual login password located at the top of this file
+            // the actual login password to the history booth gmail is located at the top of this file
 
             #region Setup+SendEmail
 

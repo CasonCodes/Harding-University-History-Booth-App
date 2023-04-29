@@ -17,13 +17,8 @@ using MailKit.Net.Smtp;
 using MailKit;
 using MimeKit;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
-
 namespace HistoryBoothApp
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class AdminPage : Page
     {
         // -----------------------------------------
@@ -31,28 +26,25 @@ namespace HistoryBoothApp
         // -----------------------------------------
         // username: hu.history.booth@gmail.com    
         // password: HistoryBoothHU!               
-        // TODO: change phone number and recovery
-        //       email address on google account
         // -----------------------------------------
 
-        // TODO: get Brackett Library email
-        private string adminEmail = "spamcason@gmail.com";
-
-        // TODO: load custom/default admin password from settings
-        private string adminPassword = "password";
+        // admin email for password reset
+        private string adminEmail = "ckirschner@harding.edu";
+        private string adminPassword;
 
         public AdminPage()
         {
             this.InitializeComponent();
             ApplicationView.PreferredLaunchViewSize = new Size(800, 500);
-            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;        
+            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
+
+            // TODO: load any/all userStory recordings into the data table
+
         }
 
         private void logoutButton_Click(object sender, RoutedEventArgs e)
         {
             // TODO: save any changes
-
-            // TODO: confirm that user wants to log out
 
             // "logging out" is just returning to the main page
             // the title bar back button also "logs out"

@@ -126,9 +126,6 @@
     <Compile Include="ConfirmPage.xaml.cs">
       <DependentUpon>ConfirmPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="InfoPage.xaml.cs">
-      <DependentUpon>InfoPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
@@ -136,9 +133,6 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RecordPage.xaml.cs">
-      <DependentUpon>RecordPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="UserStory.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -147,14 +141,19 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\bellTower.jpg" />
     <Content Include="Assets\blackBackground.JPG" />
+    <Content Include="Assets\HardingUniversity.jpg" />
     <Content Include="Assets\HUbackground.jpg" />
+    <Content Include="Assets\HUbackground10.jpg" />
     <Content Include="Assets\HUbackground2.jpg" />
     <Content Include="Assets\HUbackground3.jpg" />
     <Content Include="Assets\HUbackground4.jpg" />
     <Content Include="Assets\HUbackground5.jpg" />
     <Content Include="Assets\HUbackground6.jpg" />
     <Content Include="Assets\HUbackground7.jpg" />
+    <Content Include="Assets\HUbackground8.jpg" />
+    <Content Include="Assets\HUbackground9.jpg" />
     <Content Include="Assets\HUlogo.jpg" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-125.png" />
@@ -225,10 +224,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="InfoPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="LoginPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -236,10 +231,6 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="RecordPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

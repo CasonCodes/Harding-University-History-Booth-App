@@ -1,12 +1,17 @@
 WinMetadata\Windows.winmd
+Assets\bellTower.jpg
 Assets\blackBackground.JPG
+Assets\HardingUniversity.jpg
 Assets\HUbackground.jpg
+Assets\HUbackground10.jpg
 Assets\HUbackground2.jpg
 Assets\HUbackground3.jpg
 Assets\HUbackground4.jpg
 Assets\HUbackground5.jpg
 Assets\HUbackground6.jpg
 Assets\HUbackground7.jpg
+Assets\HUbackground8.jpg
+Assets\HUbackground9.jpg
 Assets\HUlogo.jpg
 Assets\LargeTile.scale-100.png
 Assets\LargeTile.scale-125.png
@@ -63,9 +68,7 @@ AdminPage.xbf
 App.xbf
 ConfirmPage.xbf
 HistoryBoothApp.xr.xml
-InfoPage.xbf
 LoginPage.xbf
 MainPage.xbf
-RecordPage.xbf
 Properties\Default.rd.xml
 taglib-sharp.dll

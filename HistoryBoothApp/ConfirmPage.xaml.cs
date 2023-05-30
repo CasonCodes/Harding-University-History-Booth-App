@@ -110,7 +110,7 @@ namespace HistoryBoothApp
                         if (checkBox.IsChecked == true)
                         {
                             // save tag to userStory object
-                            userStory.tags.Add(checkBox.Content.ToString()); // TODO: ?
+                            userStory.tags.Add(checkBox.Content.ToString()); 
                         }                                                                      
                     }
                 }
@@ -123,10 +123,16 @@ namespace HistoryBoothApp
             SaveAllFields();
 
             // submit userStory object
-            userStory.submitStory();
-
-            // return to the main page 
-            Frame.GoBack();
+            if (userStory.submitStory())
+            {
+                // return to the main page 
+                Frame.GoBack();
+            }
+            else
+            {
+                // TODO: display "could not submit please try again" dialog
+            }          
+            
         }
 
         private async void displayMissingInfoDialog()

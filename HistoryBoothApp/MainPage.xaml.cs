@@ -34,7 +34,11 @@ namespace HistoryBoothApp
             acknowledgement.Title = "Recording Acknowledgement";
             acknowledgement.Content =
                 "This program uses the microphone to record your voice.\n" +
-                "Any voice recording submitted is for the use of Harding University only.\n\n" +
+                "All voice recordings submitted are for the research\npurposes of Harding University only.\n\n" +
+                "What do we mean by research?\n" +
+                "-----------------------------------------\n" +
+                "Harding students and faculty may use these recordings in classes to practice interview skills or in papers as evidence." +
+                " All identifying information will be removed prior to any presentations or publication.\n\n" +
                 "Do you agree to these terms?";
 
             acknowledgement.IsPrimaryButtonEnabled = true;

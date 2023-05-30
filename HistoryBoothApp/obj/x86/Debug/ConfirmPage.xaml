@@ -29,7 +29,7 @@
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <TextBlock Width="150" Text="10:00 Minute Time Limit" HorizontalAlignment="Center"></TextBlock>
+                    <TextBlock Width="150" Text="10:00 Minute Time Limit" HorizontalAlignment="Center" FontSize="14"></TextBlock>
                 </StackPanel>
 
 
@@ -74,12 +74,12 @@
             <StackPanel x:ConnectionId='6' x:Name="userNamePanel" Orientation="Horizontal" HorizontalAlignment="Center">
 
                 <StackPanel>
-                    <TextBlock HorizontalAlignment="Center">First Name</TextBlock>
+                    <TextBlock HorizontalAlignment="Center" FontSize="14" FontWeight="Bold">First Name</TextBlock>
                     <TextBox x:ConnectionId='38' x:Name="firstNameTextBox" Height="auto" Width="200" Margin="20,20,20,20"></TextBox>
                 </StackPanel>
 
                 <StackPanel>
-                    <TextBlock HorizontalAlignment="Center">Last Name</TextBlock>
+                    <TextBlock HorizontalAlignment="Center" FontSize="14" FontWeight="Bold">Last Name</TextBlock>
                     <TextBox x:ConnectionId='37' x:Name="lastNameTextBox" Height="auto" Width="200" Margin="20,20,20,20"></TextBox>
                 </StackPanel>
 
@@ -90,19 +90,19 @@
             <StackPanel x:ConnectionId='7' x:Name="storyDetailPanel" Orientation="Horizontal" HorizontalAlignment="Center">
                 
                 <StackPanel>
-                    <TextBlock HorizontalAlignment="Center">Title of Story</TextBlock>
+                    <TextBlock HorizontalAlignment="Center" FontWeight="Bold" FontSize="12">Title of Story</TextBlock>
                     <TextBox x:ConnectionId='36' x:Name="storyTitleTextBox" Height="auto" Width="200" Margin="20,20,20,20" PlaceholderText="optional..."></TextBox>
                 </StackPanel>
 
 
                 <StackPanel>
-                    <TextBlock HorizontalAlignment="Center">Year of Story</TextBlock>
+                    <TextBlock HorizontalAlignment="Center" FontSize="14" FontWeight="Bold">Year of Story</TextBlock>
                     <ComboBox x:ConnectionId='35' x:Name="yearComboBox" Height="auto" Width="200" Margin="20,20,20,20"/>
                 </StackPanel>
                 
             </StackPanel>
-            
 
+            <TextBlock HorizontalAlignment="Center" FontSize="14" Foreground="#FFFDFAFA" FontWeight="Bold">Relation to Harding</TextBlock>
 
             <StackPanel x:ConnectionId='8' x:Name="affiliationPanel" Orientation="Horizontal" Height="auto" Margin="50,10,0,10" HorizontalAlignment="Center">
                 <RadioButton x:ConnectionId='30' x:Name="studentRadioButton" IsTabStop="False" HorizontalAlignment="Center">Student</RadioButton>
@@ -121,15 +121,15 @@
               
                 
                
-                <TextBlock HorizontalAlignment="Center" Margin="20,20,20,20">Story Tags</TextBlock>
+                <TextBlock HorizontalAlignment="Center" Margin="20,10,20,20" FontWeight="Bold" FontSize="14">Story Tags</TextBlock>
                 <StackPanel Orientation="Horizontal">
                     <CheckBox x:ConnectionId='26' x:Name="tag17">Chapel</CheckBox>
-                    <CheckBox x:ConnectionId='27' x:Name="tag18">Devotional</CheckBox>
+                    <CheckBox x:ConnectionId='27' x:Name="tag18">Faculty</CheckBox>
                     <CheckBox x:ConnectionId='28' x:Name="tag19">Social Clubs</CheckBox>
                     <CheckBox x:ConnectionId='29' x:Name="tag20">Front Lawn</CheckBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <CheckBox x:ConnectionId='22' x:Name="tag1">Yearbook</CheckBox>
+                    <CheckBox x:ConnectionId='22' x:Name="tag1">Classes</CheckBox>
                     <CheckBox x:ConnectionId='23' x:Name="tag2">Sports</CheckBox>
                     <CheckBox x:ConnectionId='24' x:Name="tag3">Studying</CheckBox>
                     <CheckBox x:ConnectionId='25' x:Name="tag4">Graduation</CheckBox>
@@ -155,7 +155,7 @@
 
 
 
-                <TextBlock HorizontalAlignment="Center" Margin="20,20,20,20">Description</TextBlock>
+                <TextBlock HorizontalAlignment="Center" Margin="20,20,20,20" FontSize="14" FontWeight="Bold">Description</TextBlock>
                 <TextBox x:ConnectionId='9' x:Name="descriptionTextBox" Width="300" Margin="20,0,20,20" PlaceholderText="optional..." TextWrapping="Wrap" MaxLength="400"/>
 
                 

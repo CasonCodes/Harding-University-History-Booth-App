@@ -31,7 +31,7 @@ namespace HistoryBoothApp
 
         public bool submitStory()
         {
-            // TODO: this
+            // TODO: save file on local drive
             return true;
         }
     }

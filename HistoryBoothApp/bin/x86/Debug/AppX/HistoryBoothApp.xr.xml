@@ -47,6 +47,9 @@
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="HorizontalAlignment" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Grid">
+      <RootProperty Name="Children" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="Background" />
@@ -60,12 +63,21 @@
       <RootProperty Name="Content" />
       <RootEvent Name="Click" />
     </RootType>
+    <RootType FullName="Microsoft.Toolkit.Uwp.UI.Controls.DataGrid">
+      <RootProperty Name="AlternatingRowBackground" />
+      <RootProperty Name="AlternatingRowForeground" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="CanUserReorderColumns" />
+      <RootProperty Name="IsReadOnly" />
+    </RootType>
     <RootType FullName="HistoryBoothApp.AdminPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="Inlines" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="FontWeight" />
       <RootProperty Name="Width" />
       <RootProperty Name="Text" />
     </RootType>
@@ -104,9 +116,6 @@
       <RootEvent Name="KeyDown" />
     </RootType>
     <RootType FullName="HistoryBoothApp.LoginPage" />
-    <RootType FullName="Windows.UI.Xaml.Controls.Grid">
-      <RootProperty Name="Children" />
-    </RootType>
     <RootType FullName="HistoryBoothApp.MainPage" />
   </Roots.RootTypes>
 </Roots>

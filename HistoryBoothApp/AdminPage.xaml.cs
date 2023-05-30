@@ -116,5 +116,37 @@ namespace HistoryBoothApp
                 SendEmail(adminEmail, emailSubject, emailBody);
             }                        
         }
+
+        private async void changeEmailButton_Click(object sender, RoutedEventArgs e)
+        {
+            var emailBox = new TextBox()
+            {
+                PlaceholderText = "New email...",
+                MaxLength = 40,
+                Height = 33
+            };
+
+            ContentDialog dialogBox = new ContentDialog()
+            {
+                Title = "Change Admin Email",
+                Content = emailBox,
+                PrimaryButtonText = "OK",
+                SecondaryButtonText = "Cancel"
+            };
+
+            dialogBox.Content = emailBox;
+            var result = await dialogBox.ShowAsync();
+
+            if (emailBox.Text != "" && result == ContentDialogResult.Primary)
+            {
+                // save admin email
+                adminEmail = emailBox.Text;
+                Windows.Storage.ApplicationData.Current.LocalSettings.Values["AdminEmail"] = adminEmail;
+
+                string emailSubject = "Admin Email Updated!";
+                string emailBody = "Your administrative email for the HU History Booth has just been reset to: \n\n\t\t" + adminEmail;
+                SendEmail(adminEmail, emailSubject, emailBody);
+            }
+        }
     }
 }
